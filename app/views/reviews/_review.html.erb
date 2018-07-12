@@ -1,0 +1,15 @@
+<li id="<%= review.id %>">
+  <%= link_to gravatar_for(review.user, size: 50), review.user %>
+  <span class="user"><%= link_to review.user.name, review.user %></span>
+  <span class="content">
+    <%= review.content %>
+    <%= image_tag review.picture.url if review.picture? %>
+  </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(review.created_at) %> ago.
+    <% if current_user?(review.user) %>
+      <%= link_to "delete", review, method: :delete,
+                                    data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>

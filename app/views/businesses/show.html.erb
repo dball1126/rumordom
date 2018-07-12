@@ -1,0 +1,90 @@
+<% provide(:title, @business.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    
+    <section>
+      <h1>
+        <%= gravatar_for @business %>
+        <%= @business.name %>
+      </h1>
+    </section>
+    
+    
+    <section class="business_infos">
+      <section class="statsz">
+      <%= render 'shared/statsz' %>
+    </section>
+    
+    <%= render 'followz_form' if logged_in? %>
+      <h1>
+        <% if @business.image_url.present? %>
+        <br><%= image_tag @business.image_url %></br>
+        <% else %>
+        <%= link_to image_tag("http://placehold.it/370x210"), @business %>
+         <% end %>
+         <div style='width: 800px;'>  
+  <div id="map" style='width: 800px; height: 400px;'></div>  
+</div>  
+
+<script type="text/javascript">  
+handler = Gmaps.build('Google');  
+handler.buildMap({ provider: { Zoom: 12}, internal: {id: 'map'}}, function(){  
+  markers = handler.addMarkers([  
+    {  
+      "lat": <%= @business.latitude %>,  
+      "lng": <%= @business.longitude %>,  
+      "picture": {  
+        "width":  32,  
+        "height": 32  
+      },  
+      "infowindow": "SJSU"  
+    }  
+  ]);  
+  handler.bounds.extendWith(markers);  
+  handler.fitMapToBounds();
+  handler.getMap().setZoom(19);
+});  
+</script>
+      </h1>
+      <p>
+  <strong>Latitude:</strong>
+  <%= @business.latitude %>
+  <strong>Longitude:</strong>
+  <%= @business.longitude %>
+</p>
+      
+      <br><p>
+        <br><%= @business.name %></br>
+        <br><%= @business.address1 %></br>
+        <br><%= @business.city %>
+            <%= @business.state %>,
+            <%= @business.zipcode %></br>
+        <br><%= @business.phone %></br>
+        
+<br>Category1: <%= Category.find(@business.category1_id).name %></br>
+<br>Category2: <%= Category.find(@business.category2_id).name %></br>
+<br>Category3: <%= Category.find(@business.category3_id).name %></br>
+      </br></p>
+    </section>
+  </aside>
+  </div>
+  <div> 
+  <div class="clearfix padding30">
+      <h3>Business Description</h3>
+      <p><%= @business.description %> XYZ Consulting is a new company that provides expertise in search marketing solutions for business on a worldwide basis, including website promotion, online advertising and search engine optimization techniques to improve its clients' positioning in the search engines. We will cater to the higher education market, including colleges, universities and professional educational institutions.</p>
+      </div>
+      
+  <%= link_to "Write about your recent experience ", new_business_experience_path(@business), class: "btn btn-lg btn-primary" %>
+
+  </div>
+  
+  <h3>Experiences</h3>
+  <div class="col-md-8">
+    <% if @business.experiences.any? %>
+      <h3>Experiences (<%= @experiences.count %>)</h3>
+      <ol class="experiences">
+        <%= render @experiences %>
+      </ol>
+   
+    <% end %>
+  </div>

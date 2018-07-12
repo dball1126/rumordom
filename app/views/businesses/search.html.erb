@@ -1,0 +1,36 @@
+<div class="container page-content">
+  <div class="row">
+    <div class="span12">
+      <div class="row">
+        <% if @businesses.blank? %>
+          <h3>Couldn't find a business with your search criteria</h3>
+          <% else %>
+            <% @businesses.each do |business| %>
+              <div class="span4 box-container">
+                <div class="holder">
+                  <a class="overlay" href="#" title="property title">
+                    <span class="more"></span>
+                    <% if business.image_url.present? %>
+                      <%= link_to image_tag(business.image_url.to_s), business %>
+                    <% else %>
+                      <%= link_to image_tag("http://placehold.it/370x210"), business %>
+                    <% end %>
+                  </a>
+    <span class="prop-tag">For Sale</span>
+    <div class="prop-info">
+      <h3 class="prop-title"><%= link_to business.name, business %></h3>
+      <ul class="more-info clearfix">
+        <li class="info-label clearfix"><span class="pull-left">Phone:</span>
+        <span class="qty pull-right"><%= business.phone %></span></li>
+        <li class="info-label clearfix"><span class="pull-left">Location:</span>
+        <span class="qty pull-right"><%= business.city.capitalize %>, <%= business.state.upcase %></span></li>
+      </ul>
+    </div>
+    </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+</div>
+</div>

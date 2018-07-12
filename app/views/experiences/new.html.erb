@@ -1,0 +1,9 @@
+<div class="experience">
+<%= form_for [@business, @experience] do |f| %>
+  <%= f.text_area :comment, placeholder: "Compose new experience..." %>
+  <%= f.submit class: "btn btn-primary"%>
+  <span class="picture">
+    <%= f.file_field :picture %>
+  </span>
+<% end %>
+</div>

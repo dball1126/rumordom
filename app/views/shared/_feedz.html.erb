@@ -1,0 +1,7 @@
+<% if @feedz_items.any? %>
+  <ol class="reviews">
+    <%= render @feedz_items %>
+  </ol>
+  <%=  will_paginate @feedz_items %>
+  <% #changed class from reviews to experiences 4 25 18 %>
+<% end %>

@@ -1,0 +1,18 @@
+<li id="experience-<%= experience.id %>">
+  <%= link_to gravatar_for(experience.user, size: 50), experience.user %>
+  <span class="user"><%= link_to experience.user.name, experience.user %></span>
+  <span class="comment"><%= experience.comment %>
+                        <%= image_tag experience.picture.url if experience.picture? %>
+  </span>
+    <div class="host">
+    <%= link_to Business.find_by(id: experience.business_id).name, Business.find_by(id: experience.business_id) %>
+    </div>
+    <span class="timestamp">
+    Posted <%= time_ago_in_words(experience.created_at) %> ago.
+    <% if current_user?(experience.user) %>
+      <%= link_to "delete", experience, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+  
+</li>
