@@ -47,15 +47,9 @@ handler.buildMap({ provider: { Zoom: 12}, internal: {id: 'map'}}, function(){
 </script>
       </h1>
       <p>
-  <strong>Latitude:</strong>
-  <%= @business.latitude %>
-  <strong>Longitude:</strong>
-  <%= @business.longitude %>
-</p>
-      
-      <br><p>
+  
         <br><%= @business.name %></br>
-        <br><%= @business.address1 %></br>
+        <br><%= @business.address2.present? ? @business.address1 + " #{@business.address2}" : @business.address1 %></br>
         <br><%= @business.city %>
             <%= @business.state %>,
             <%= @business.zipcode %></br>
@@ -69,10 +63,6 @@ handler.buildMap({ provider: { Zoom: 12}, internal: {id: 'map'}}, function(){
   </aside>
   </div>
   <div> 
-  <div class="clearfix padding30">
-      <h3>Business Description</h3>
-      <p><%= @business.description %> XYZ Consulting is a new company that provides expertise in search marketing solutions for business on a worldwide basis, including website promotion, online advertising and search engine optimization techniques to improve its clients' positioning in the search engines. We will cater to the higher education market, including colleges, universities and professional educational institutions.</p>
-      </div>
       
   <%= link_to "Write about your recent experience ", new_business_experience_path(@business), class: "btn btn-lg btn-primary" %>
 

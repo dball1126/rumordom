@@ -122,3 +122,19 @@ Trying to fix the search method for businesses
 
 
 PLAN:1. Look at Organization.  Comment out the valid geocode and before save geocode and import records with coordinates.   2. uncomment the geocode and import records that need to be geocoded but only after speaking to Google about pricing.
+
+
+
+Today is June 13th
+I have the category creation working
+I have the import business method working
+I took away a couple of attributes like description
+Need to modify Schema with our values. 
+Double check whether we can import just some columns
+take a look at the gravator for on the Business Side and the picture uploader
+Can I upload multiple pictures?
+I may have to change the Username gravatar for feature as well depending.
+Modified some stuff on business show and new pages.
+
+
+Fixing heroku
