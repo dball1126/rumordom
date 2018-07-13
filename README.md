@@ -138,3 +138,4 @@ Modified some stuff on business show and new pages.
 
 
 Fixing heroku
+dont know where the gitignore file is
