@@ -1,19 +1,18 @@
 <% provide(:title, @business.name) %>
 <div class="row">
   <aside class="col-md-4">
-    
-    <section>
+    <section class="business_info">
       <h1>
         <%= gravatar_for @business %>
         <%= @business.name %>
       </h1>
     </section>
-    
-    
     <section class="business_infos">
       <section class="statsz">
       <%= render 'shared/statsz' %>
     </section>
+    </aside>
+    
     
     <%= render 'followz_form' if logged_in? %>
       <h1>
@@ -60,8 +59,7 @@ handler.buildMap({ provider: { Zoom: 12}, internal: {id: 'map'}}, function(){
 <br>Category3: <%= Category.find(@business.category3_id).name %></br>
       </br></p>
     </section>
-  </aside>
-  </div>
+  
   <div> 
       
   <%= link_to "Write about your recent experience ", new_business_experience_path(@business), class: "btn btn-lg btn-primary" %>
@@ -78,3 +76,6 @@ handler.buildMap({ provider: { Zoom: 12}, internal: {id: 'map'}}, function(){
    
     <% end %>
   </div>
+  
+  </div>
+  

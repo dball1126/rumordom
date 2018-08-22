@@ -1,18 +1,11 @@
 <header class="navbar navbar-fixed-top myNavbar">
   <div class="container">
-    <%  if logged_in? %>
-    <%= link_to image_tag("rumordom2nd3.png", :size => "50x50"), root_path, id: "links1" %>
-    <% else %>
-    <%= link_to "Foodback", root_path, id: "links2" %>
-    <% end %>
     <nav>
-      <ul class="nav navbar-nav navbar-right myNavbar">
-        <li><%= link_to "Home", root_path, id: "links" %></li>
-        <li><%= link_to "About", about_path, id: "links" %></li>
-        <li><%= link_to "Contact", contact_path, id: "links" %></li>
+      <ul class="nav navbar-nav myNavbarz">
+        <%= link_to image_tag("rumordom2nd3.png", :size => "50x50"), root_path, id: "links1" %>
         <li><%= link_to "Businesses", businesses_path, id: "links" %></li>
       <% if logged_in? %>
-          <li><%= link_to "Users", users_path %></li>
+          <li><%= link_to "Users", users_path, id: "links" %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
@@ -33,4 +26,3 @@
     </nav>
   </div>
 </header>
-
