@@ -9,11 +9,10 @@ class InitialSchema < ActiveRecord::Migration[5.1]
       t.string :state
       t.string :zipcode
       t.string :phone
-      t.string :email
+      t.string :website
       t.string :category1
       t.string :category2
       t.string :category3
-      t.text   :description
     end
     
     create_table :experiences do |t|
