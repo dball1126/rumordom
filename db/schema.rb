@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20180503041544) do
     t.integer "category1_id"
     t.integer "category2_id"
     t.integer "category3_id"
-    t.string "image"
     t.index ["category1_id"], name: "index_businesses_on_category1_id"
     t.index ["category2_id"], name: "index_businesses_on_category2_id"
     t.index ["category3_id"], name: "index_businesses_on_category3_id"

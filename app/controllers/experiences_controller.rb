@@ -31,6 +31,12 @@ class ExperiencesController < ApplicationController
     redirect_to request.referrer || root_url
   end
   
+  def experience_list
+    y = Experience.all.to_a
+    arr = []
+     y.each {|z| arr << z.business_id }
+  end
+  
   private
   
   def experience_params

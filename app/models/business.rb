@@ -22,8 +22,8 @@ class Business < ApplicationRecord
   before_save :category2_id
   
   
-  geocoded_by :full_address
-  after_validation :geocode
+  #geocoded_by :full_address
+  #after_validation :geocode
   
   mount_uploader :image, ImageUploader
   
@@ -49,67 +49,70 @@ class Business < ApplicationRecord
      Business.create! row.to_hash
      end
   end
+
+=begin
+  def category1_id
+    list_arr=[]
+    Category.all.to_a.each {|x| list_arr << x.name }
+   if list_arr.include?(category1)
+      i=0
+      list_arr.each{|x| 
+      if x == category1
+        i
+      else
+        i+=1
+      end }
+      i
+    else
+      item = Category.new
+      item.name = category1
+      item.save
+      item.id
+    end
+  end
   
-#  def category1_id
-#    list_arr=[]
-#    Category.all.to_a.each {|x| list_arr << x.name }
-#    if list_arr.include?(category1)
-#      i=0
-#      list_arr.each{|x| 
-#      if x == category1
-#        i
-#      else
-#        i+=1
-#      end }
-#      i
-#    else
-#      item = Category.new
-#      item.name = category1
-#      item.save
-#      item.id
-#    end
-#  end
+  def category2_id
+    list_arr=[]
+    Category.all.to_a.each {|x| list_arr << x.name }
+    if list_arr.include?(category2)
+      i=0
+      list_arr.each{|x| 
+      if x == category2
+        i
+      else
+        i+=1
+      end }
+      i
+    else
+      item = Category.new
+      item.name = category2
+      item.save
+      item.id
+    end
+    10
+  end
   
-#  def category2_id
-#    list_arr=[]
-#    Category.all.to_a.each {|x| list_arr << x.name }
-#    if list_arr.include?(category2)
-#      i=0
-#      list_arr.each{|x| 
-#      if x == category2
-#        i
-#      else
-#        i+=1
-#      end }
-#      i
-#    else
-#      item = Category.new
-#      item.name = category2
-#      item.save
-#      item.id
-#    end
-#  end
+  def category3_id
+    list_arr=[]
+    Category.all.to_a.each {|x| list_arr << x.name }
+    if list_arr.include?(category3)
+      i=0
+      list_arr.each{|x| 
+      if x == category3
+        i
+      else
+        i+=1
+      end }
+      i
+    else
+      item = Category.new
+      item.name = category3
+      item.save
+      item.id
+    end
+  end
   
-#  def category3_id
-#    list_arr=[]
-#    Category.all.to_a.each {|x| list_arr << x.name }
-#    if list_arr.include?(category3)
-#      i=0
-#      list_arr.each{|x| 
-#      if x == category3
-#        i
-#      else
-#        i+=1
-#      end }
-#      i
-#    else
-#      item = Category.new
-#      item.name = category3
-#      item.save
-#      item.id
-#    end
-#  end
-  
+=end
   
   
   

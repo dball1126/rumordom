@@ -10,8 +10,6 @@
   <%= f.label :name %>
   <%= f.text_field :name, class: 'form-control' %>
 
-  <%= f.label :description %>
-  <%= f.text_area :description, class: 'form-control' %>
   <%= f.label :Choose_up_to_three_categories %>
 <%= f.select :category1_id, Category.all.map{ |f| [f.name, f.id] } %>
 <%= f.select :category2_id, Category.all.map{ |f| [f.name, f.id] } %>
@@ -34,11 +32,7 @@
   <%= f.label :phone %>
   <%= f.text_field :phone, class: 'form-control' %>
   
-  <%= f.label :email %>
-  <%= f.email_field :email, class: 'form-control' %>
-  
-  <%= f.label "Add image" %>
-  <%= f.file_field :image %><br />
+  <br />
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

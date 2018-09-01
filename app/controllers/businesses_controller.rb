@@ -7,7 +7,7 @@ class BusinessesController < ApplicationController
     @businesses = Business.paginate(page: params[:page])
     respond_to do |format|
       format.html
-      format.csv { send_data @businesses.to_csv(['name', 'city', 'state', 'zipcode', 'address1', 'address2', 'category1_id', 'category2_id', 'category3_id', 'category1', 'category2', 'category3', 'phone', 'website', 'latitude', 'longitude', 'image']) }
+      format.csv { send_data @businesses.to_csv(['name', 'city', 'state', 'zipcode', 'address1', 'address2', 'category1_id', 'category2_id', 'category3_id', 'category1', 'category2', 'category3', 'phone', 'website', 'latitude', 'longitude']) }
     end
    # if params[:search]
   #    @businesses = Business.search(params[:search]).order("created_at DESC")
@@ -136,7 +136,7 @@ class BusinessesController < ApplicationController
   end
   
   def business_params
-    params.require(:business).permit(:name, :city, :state, :zipcode,                                      :address1, :address2, :category1_id, :category2_id, :category3_id, :category1, :category2, :category3, :phone, :website, :latitude, :longitude, :image)
+    params.require(:business).permit(:name, :city, :state, :zipcode, :address1, :address2, :category1_id, :category2_id, :category3_id, :category1, :category2, :category3, :phone, :website, :latitude, :longitude)
   end
   # added correct user admin user for business 4 29 18
   def correct_user

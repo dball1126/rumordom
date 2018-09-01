@@ -139,3 +139,24 @@ Modified some stuff on business show and new pages.
 
 Fixing heroku
 dont know where the gitignore file is
+
+
+8 24 18
+I just fixed business attributes, but i removed email, this is throwing an error because apparenlty the gravatar was tied to the business email which is now gone.  Investigate ways to go around this.
+
+
+<%= #gravatar_fors business, size: 50 %><%= gravatar_for @business %>
+
+migration
+class AddImageToBusinesses < ActiveRecord::Migration[5.1]
+  def change
+    add_column :businesses, :image, :string
+  end
+end
+
+new.html.erb
+<%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+  
+  <%= f.label "Add image" %>
+  <%= f.file_field :image %>
