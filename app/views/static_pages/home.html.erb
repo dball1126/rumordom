@@ -6,6 +6,7 @@
       </section>
       <section class="stats">
         <%= render 'shared/stats' %>
+        <%= render 'users/follow_form' if logged_in? %>
       </section>
       <%= link_to "Create a Business", businesses_new_path, class: "btn btn-lg btn-primary" %>
     </aside>

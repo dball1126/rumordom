@@ -22,8 +22,8 @@ class Business < ApplicationRecord
   before_save :category2_id
   
   
-  #geocoded_by :full_address
-  #after_validation :geocode
+  geocoded_by :full_address
+  after_validation :geocode
   
   mount_uploader :image, ImageUploader
   
@@ -123,7 +123,7 @@ class Business < ApplicationRecord
   
   def self.search(params)
     #businesses = Business.where(category_id: params[:category].to_i)
-  businesses = Business.where("name like ? or description like ?", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
+  businesses = Business.where("name like ?", "%#{params[:search]}%") if params[:search].present?
     businesses = businesses.near(params[:location], 20) if params[:location].present?
     businesses
   end

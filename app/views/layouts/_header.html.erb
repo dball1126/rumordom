@@ -11,11 +11,11 @@
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li><%= link_to "Profile", current_user, id: "links5" %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user), id: "links5" %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "Log out", logout_path, method: :delete %>
+                <%= link_to "Log out", logout_path, method: :delete, id: "links5" %>
               </li>
             </ul>
           </li>

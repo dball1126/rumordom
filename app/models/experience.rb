@@ -8,7 +8,6 @@ class Experience < ActiveRecord::Base
     validates :user_id, presence: true
     validates :comment, presence: true, length: { maximum: 130 }
     validate  :picture_size   
-    
     private
 
     # Validates the size of an uploaded picture.
