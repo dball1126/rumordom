@@ -114,12 +114,12 @@ class Business < ApplicationRecord
   
 =end
   
-  def routing1
-    [latitude]
-  end
-  def routing2
-    [longitude]
-  end
+ # def routing1
+#    [latitude]
+#  end
+#  def routing2
+#    [longitude]
+#  end
   
   
   def full_address
