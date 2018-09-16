@@ -16,6 +16,7 @@ gem 'jbuilder',     '2.7.0'
 gem 'geocoder', '~> 1.4', '>= 1.4.9'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
+gem 'underscore-rails', '~> 1.8', '>= 1.8.3'
 gem 'gmaps4rails'
 group :development, :test do
   gem 'sqlite3', '1.3.13'

@@ -50,7 +50,7 @@ class BusinessesController < ApplicationController
 
   def show
     
-    load_businessz
+    
     @businessz = Business.paginate(page: params[:page])
     #redirect_to root_url and return unless @user.activated?
     
@@ -58,6 +58,7 @@ class BusinessesController < ApplicationController
     @reviews = Review.where(business_id: @business)
     #@experiences = @user.experiences.paginate(page: params[:page])
     #@reviews = @user.reviews.paginate(page: params[:page])
+    
   end
 
   def followerzs
@@ -68,7 +69,10 @@ class BusinessesController < ApplicationController
   end
 
   def search
+    
+    #@businessz  = Business.search(params)
     @businesses = Business.search(params)
+    load_businessz
   end
   
   def load_businesses 
@@ -93,12 +97,13 @@ class BusinessesController < ApplicationController
                     :height => 32})
 
       marker.infowindow render_to_string(:partial => "/businesses/info",   
-        :locals => {:name => plot.name, :battery => @battery, :date => rand(6.months.ago..Time.now), :ip => @ip, :connected => @connected })  
+        :locals => {:name => plot.name, :battery => @battery, :date => rand(6.months.ago..Time.now), :ip => @ip, :connected => @connected, :address1 => plot.address1, :city => plot.city })  
    end  
  end
   
   def load_businessz
-   @businessz_default = Gmaps4rails.build_markers(Business.paginate(page: params[:page])) do |plot, marker|  
+    
+   @businessz_default = Gmaps4rails.build_markers(@businesses.paginate(page: params[:page])) do |plot, marker|  
       marker.lat plot.latitude  
       marker.lng plot.longitude  
 
@@ -118,8 +123,8 @@ class BusinessesController < ApplicationController
                     :width => 32,
                     :height => 32})
 
-      marker.infowindow render_to_string(:partial => "/businesses/info",   
-        :locals => {:name => plot.name, :battery => @battery, :date => rand(6.months.ago..Time.now), :ip => @ip, :connected => @connected })  
+      marker.infowindow render_to_string(:partial => "/businesses/infoz",   
+        :locals => {:name => plot.name, :battery => @battery, :date => rand(6.months.ago..Time.now), :ip => @ip, :connected => @connected, :city => plot.city, :state => plot.state, :address1 => plot.address1, :zipcode => plot.zipcode, :id => plot.id })  
    end  
  end
 

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get '/user_feed',  to: 'static_pages#user_feed'
+  get '/stats',      to: 'static_pages#stats'
   
   #added 5 9 2018
   resources :businesses do 

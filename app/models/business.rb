@@ -114,7 +114,12 @@ class Business < ApplicationRecord
   
 =end
   
-  
+  def routing1
+    [latitude]
+  end
+  def routing2
+    [longitude]
+  end
   
   
   def full_address
@@ -123,7 +128,7 @@ class Business < ApplicationRecord
   
   def self.search(params)
     #businesses = Business.where(category_id: params[:category].to_i)
-  businesses = Business.where("name like ?", "%#{params[:search]}%") if params[:search].present?
+  businesses = Business.where("name like ? or city like ? or state like ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
     businesses = businesses.near(params[:location], 20) if params[:location].present?
     businesses
   end

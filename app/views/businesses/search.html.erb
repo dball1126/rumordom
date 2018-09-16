@@ -6,6 +6,7 @@
           <h3>Couldn't find a business with your search criteria</h3>
           <% else %>
             <% @businesses.each do |business| %>
+            
               <div class="span4 box-container">
                 <div class="holder">
                   <a class="overlay" href="#" title="property title">
@@ -13,9 +14,10 @@
                     <% if business.image_url.present? %>
                       <%= link_to image_tag(business.image_url.to_s), business %>
                     <% else %>
-                      <%= link_to image_tag("http://placehold.it/370x210"), business %>
+                      <%= link_to image_tag("http://placehold.it/300x190"), business %>
                     <% end %>
                   </a>
+                  
     <span class="prop-tag">For Sale</span>
     <div class="prop-info">
       <h3 class="prop-title"><%= link_to business.name, business %></h3>
@@ -34,3 +36,14 @@
 </div>
 </div>
 </div>
+<div class="mapx">  
+  <div id="map" style='width: 350px; height: 250px;'></div>  
+</div> 
+            <script type="text/javascript">
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: { Zoom: 12 }, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @businessz_default.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+  handler.getMap().setZoom(18);
+      }); </script>

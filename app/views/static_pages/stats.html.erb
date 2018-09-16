@@ -1,0 +1,19 @@
+<% if logged_in? %>
+    <div class="row">
+    <aside class="col-md-8">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+        <%= render 'users/follow_form' if logged_in? %>
+      </section>
+      <%= link_to "Create a Business", businesses_new_path, class: "btn btn-lg btn-primary" %>
+    </aside>
+  </div>
+<% else %>
+
+  <div>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+  <% end %>

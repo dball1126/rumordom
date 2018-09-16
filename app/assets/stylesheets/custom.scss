@@ -57,7 +57,7 @@ list-style: none;
 background-color: #d451ff;
 margin-left: -60px;
    li{
-      background-color: #6CB06A;
+      background-color: #8c1aff;
       margin-top: -70px;
       margin:0 auto;
       padding: 1px;
@@ -80,7 +80,7 @@ margin-left: -60px;
  
  .myNavbarz   {
     width: 100%;
-    background-color: #6CB06A;
+    background-color: #8c1aff;
     color: #3cff6d;
     margin-top: -40px;
     a {
@@ -90,6 +90,7 @@ margin-left: -60px;
         color: red;
         &:dropdown {
           color: blue;
+          background-color: Red;
         }
       }
     }
@@ -100,6 +101,9 @@ margin-left: -60px;
    li {
   
      color: White;
+   }
+   .dropdown-menu {
+     background-color: White;
    }
  }
  
@@ -169,11 +173,7 @@ margin-left: -60px;
   }
 }
 
-#links5 {
-      background-color: #8c1aff;
-      width: 100%;
-      color: white;
-    }
+
 
 /* footer */
 
@@ -707,13 +707,13 @@ span.picture {
 }
 
 .before-buttons {
-  width: 700px;
+  width: 600px;
 }
 .buttons {
   position: relative;
   width: 200px;
   padding: 6px 15px;
-  margin-left: 700px;
+  margin-left: 600px;
   margin-top:  -55px;
   background-color: transparent;
   color: #207cca;
@@ -744,22 +744,22 @@ span.picture {
     header {
       width: 800px;
       height: 30px;
-      background-color: #6CB06A;
+      background-color: #8c1aff;
     }
     .myNavbar {
       width: 800px;
       height: 30px;
       margin-right: 0px;
-      background-color: #6CB06A;
+      background-color: #8c1aff;
       nav {
         width: 600px;
         height: 30px;
-        background-color: #6CB06A;
+        background-color: #8c1aff;
       }
       .container {
         width: 800px;
         height: 35px;
-        background-color: #6CB06A;
+        background-color: #8c1aff;
       }
     }
     .myNavbarz {
@@ -771,11 +771,12 @@ span.picture {
       li {
         width: 100px;
         float: left;
-
+      }
+      .dropdown-menu li {
+        background-color: White;
       }
     }
     
-
   .span2 {
     width: 800px;
     float: left;
@@ -807,6 +808,9 @@ span.picture {
   
   .col-md-8 {
     padding-top: 15px;
+    .user_info {
+      padding-top: 35px;
+    }
   }
 
 }
@@ -824,15 +828,15 @@ span.picture {
       width: 600px;
       height: 40px;
       margin-right: 0px;
-      background-color: #6CB06A;
+      background-color: #8c1aff;
       nav {
         width: 600px;
-        background-color: #6CB06A;
+        background-color: #8c1aff;
       }
       .container {
         width: 600px;
         height: 35px;
-        background-color: #6CB06A;
+        background-color: #8c1aff;
       }
     }
     .myNavbarz {
@@ -878,6 +882,9 @@ span.picture {
   
   .col-md-8 {
     padding-top: 15px;
+    h3 {
+      font-size: 1.57em;
+    }
   }
 
 }

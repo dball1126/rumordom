@@ -160,3 +160,9 @@ new.html.erb
   
   <%= f.label "Add image" %>
   <%= f.file_field :image %>
+  
+  9 15 18
+  Couldnt load infowindow with search results.
+  Search controller = @businesses
+  Business controller in search = load_businessz after @businesses
+  load_businessz = Instead of Business.all   use @businesses

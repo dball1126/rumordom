@@ -26,12 +26,12 @@ handler.buildMap({ provider: { Zoom: 12}, internal: {id: 'map'}}, function(){
   markers = handler.addMarkers([  
     {  
       "lat": <%= @business.latitude %>,  
-      "lng": <%= @business.longitude %>,  
+      "lng": <%= @business.longitude %>,
       "picture": {  
         "width":  32,  
         "height": 32  
       },  
-      "infowindow": "SJSU"  
+      "infowindow": "SUJU"
     }  
   ]);  
   handler.bounds.extendWith(markers);  
