@@ -45,8 +45,6 @@ header.navbar {
 
 .mainbar {
   text-align: center;
-  
-  
 }
 
 
@@ -101,6 +99,7 @@ margin-left: -60px;
    li {
   
      color: White;
+     
    }
    .dropdown-menu {
      background-color: White;
@@ -123,7 +122,7 @@ margin-left: -60px;
 }
  
  #links  {
-  color: White;
+  color: Black;
   font-weight: bold;
   &:hover {
     color: Red;
@@ -779,6 +778,7 @@ span.picture {
       .dropdown-menu li {
         background-color: White;
       }
+     
     }
     
   .span2 {
