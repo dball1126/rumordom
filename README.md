@@ -166,3 +166,22 @@ new.html.erb
   Search controller = @businesses
   Business controller in search = load_businessz after @businesses
   load_businessz = Instead of Business.all   use @businesses
+  
+  <div class="span4 box-container">
+                <div class="holder">
+                  <a class="overlay" href="#" title="property title">
+                    <span class="more"></span>
+                    <% if business.image_url.present? %>
+                      <%= link_to image_tag(business.image_url.to_s), business %>
+                    <% else %>
+                      <%= link_to image_tag("http://placehold.it/300x190"), business %>
+                    <% end %>
+                    <div class="prop-info">
+      <h3 class="prop-title"><%= link_to business.name, business %></h3>
+      <ul class="more-info clearfix">
+        <li class="info-label clearfix"><span class="pull-left">Phone:</span>
+        <span class="qty pull-right"><%= business.phone %></span></li>
+        <li class="info-label clearfix"><span class="pull-left">Location:</span>
+        <span class="qty pull-right"><%= business.city.capitalize %>, <%= business.state.upcase %></span></li>
+      </ul>
+    </div>
