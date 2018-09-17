@@ -18,6 +18,50 @@ Category3: <%= Category.find(@business.category3_id).name %></br>
       <section class="statsz">
       <%= render 'shared/statsz' %>
       <div style='width: 300px;'>  
+<% y = @business.experiences.all.to_a %>
+         <% arr = [] %>
+         <% y.each {|z| arr << z.business_id } %>
+        <% if arr.include?(@business.id) %>
+        <h4>Click for more Pictures about this Business</h4>
+        <br><%= image_tag y[0].picture.url %></br>
+        <% else %>
+        <%= link_to image_tag("http://placehold.it/200x200"), @business %>
+         <% end %>
+
+    </section>
+    </aside>
+    <div class="col-md-8">
+    <div class="business_mobile">
+    <section class="business_info">
+      <h3>
+        <%= @business.name %>
+      </h3>
+            <%= @business.address1 %></br>
+            <%= @business.city %>,
+            <%= @business.state %>
+            <%= @business.zipcode %></br>
+            Phone: <%= @business.phone %></br>
+Category1: <%= Category.find(@business.category1_id).name %></br>
+Category2: <%= Category.find(@business.category2_id).name %></br>
+Category3: <%= Category.find(@business.category3_id).name %></br>
+<%= render 'followz_form' if logged_in? %>
+    </section>
+      <section class="statsz">
+      <%= render 'shared/statsz' %>
+      <div class="business_pictures">
+<% y = @business.experiences.all.to_a %>
+         <% arr = [] %>
+         <% y.each {|z| arr << z.business_id } %>
+        <% if arr.include?(@business.id) %>
+        <h4>Click for more Pictures about this Business</h4>
+        <br><%= image_tag y[0].picture.url %></br>
+        <% else %>
+        <%= link_to image_tag("http://placehold.it/200x200"), @business %>
+         <% end %>
+      </div>
+    </section>
+    </div>
+    <div style='width: 300px;'>  
   <div id="map" style='width: 300px; height: 200px;'></div>  
 </div>  
       <script type="text/javascript">  
@@ -36,28 +80,11 @@ handler.buildMap({ provider: { Zoom: 12}, internal: {id: 'map'}}, function(){
   ]);  
   handler.bounds.extendWith(markers);  
   handler.fitMapToBounds();
-  handler.getMap().setZoom(19);
+  handler.getMap().setZoom(15);
 });  
 </script>
-<% y = @business.experiences.all.to_a %>
-         <% arr = [] %>
-         <% y.each {|z| arr << z.business_id } %>
-        <% if arr.include?(@business.id) %>
-        <h4>Click for more Pictures about this Business</h4>
-        <br><%= image_tag y[0].picture.url %></br>
-        <% else %>
-        <%= link_to image_tag("http://placehold.it/200x200"), @business %>
-         <% end %>
-
-    </section>
-    </aside>
-    <div class="col-md-8">
-    
-    
-  <div> 
-      
-  <%= link_to "Write about your recent experience ", new_business_experience_path(@business), class: "btn btn-lg btn-primary" %>
-
+  <div class="experience_button"> 
+  <%= link_to "Write about your recent experience", new_business_experience_path(@business), class: "btn btn-lg btn-primary" %>
   </div>
   <div class="col-md-8">
     <% if @business.experiences.any? %>

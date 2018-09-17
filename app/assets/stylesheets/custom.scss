@@ -733,7 +733,11 @@ span.picture {
 }
 
 .col-md-8 {
-  margin-top: -5px;
+  margin-top: 15px;
+  .business_mobile {
+    display: none;
+  }
+  
 }
 
 @media only screen and (max-width : 800px)  { 
@@ -787,6 +791,9 @@ span.picture {
       .before-buttons {
         width: 400px;
       }
+      .location_search {
+        width: 200px;
+      }
     }
   }
   .buttons {
@@ -794,7 +801,7 @@ span.picture {
   float: left;
   width: 100px;
   padding: 3px 4px;
-  margin-left: 400px;
+  margin-left: 200px;
   margin-top:  -50px;
   background-color: transparent;
   color: #207cca;
@@ -808,11 +815,23 @@ span.picture {
   
   .col-md-8 {
     padding-top: 15px;
+    .business_mobile {
+      display: inline-block;
+      .business_pictures {
+       display: none;
+      }
+    }
+    .experience_button {
+      width: 300px;
+    .btn.btn-lg.btn-primary {
+      width: 300px;
+      font-size: 1em;
+    }
+    }
     .user_info {
       padding-top: 35px;
     }
   }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -868,7 +887,7 @@ span.picture {
   float: left;
   width: 100px;
   padding: 3px 4px;
-  margin-left: 300px;
+  margin-left: 200px;
   margin-top:  -50px;
   background-color: transparent;
   color: #207cca;

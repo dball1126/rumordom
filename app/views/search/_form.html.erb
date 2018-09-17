@@ -1,9 +1,11 @@
 <div class="span2">
     <div class="search-form" >
-    <div class="before-buttons", style="font-size:1.4em;">
+    <div class="before-buttons", style="font-size:1.2em;">
       <%= form_tag search_businesses_path, method: :get do |f| %>
 <%= text_field_tag :search, nil, placeholder: "Search for A Business....write about your recent customer experience" %>
+<div class="location_search">
 <%= text_field_tag :location, nil, placeholder: "denver, miami, etc." %>
+</div>
 </div>
 <div class="buttons">
 <%= submit_tag "Search", class: "btn btn-md btn-primary" %>
