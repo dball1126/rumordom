@@ -18,26 +18,10 @@
     </div>
   </div>
 <% else %>
-  <p>Welcome to Rumordom.  The goal of this website is to improve the experiences that
-     customers have with businesses.  We will not share your information, we value privacy, 
-     but we believe that every experience matters, so good or bad, big or small, sign onto 
-     this site and let everyone know how your recent experience was.  Remember, you can
-     interact with an organization several times, but most of the time every experience is
-     different, and this is why Rumordom exists to emphasize that every experience matters.
-     We want to know about <strong>EVERY SINGLE EXPERIENCE</strong>, because it matters.</p>
-  <p><strong>It's not a review, it's an experience.</strong></p>
-  <div class="span4">
-    <div class="search-form">
-      <p>Find A Business</p>
-      <%= form_tag search_businesses_path, method: :get do |f| %>
-        <%= text_field_tag :search, nil, placeholder: "search for bussinesses, etc." %>
-        <%= text_field_tag :location, nil, placeholder: "new york, miami, etc." %>
-        
-        <%= submit_tag 'Search' %>
-      <% end %>
-    </div>
+<div class="main_message">
+<font color="#03ff03" font-weight: "bold">Rumor</font><font color="#ff0303" font-weight: "bold">dom</font>
   </div>
-  
+  <p>Welcome to Rumordom. This is a website where you can write about an experience you've had with a business. <strong>Every Experience Matters</strong> and someone should know about it. Click <%= link_to "HERE", about_path %> for more information about <font color="#03ff03" size="3em" font-weight: "bold">Rumor</font><font color="#ff0303" size="3em" font-weight: "bold">dom</font>.</p>
   <div>
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
   <%= link_to "Write about an Experience", new_business_path, class: "btn btn-lg btn-primary" %>

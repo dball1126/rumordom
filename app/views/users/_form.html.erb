@@ -12,6 +12,9 @@
 
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
+  
+  <p>By signing up you agree to our <%= link_to "Terms of Service", terms_path %> and our <%= link_to "Privacy Policy", privacy_path %></p>
+  
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

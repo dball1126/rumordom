@@ -177,23 +177,23 @@ margin-left: -60px;
 /* footer */
 
 footer.navbar {
-  background-color: White;
+  background-color: #8c1aff;
 }
 
 footer ul {
-padding-right: 300px;
-text-align: center;
+padding-left: 10px;
+text-align: left;
 word-spacing: 5px;
 list-style: none;
-background-color: White;
-margin-left: -60px;
+background-color: #8c1aff;
+margin-left: -10px;
    li{
-      background-color: White;
+      background-color: #8c1aff;
       margin-top: -70px;
       margin:0 auto; 
       display:inline; 
       word-spacing: 1px;
-    
+      color: white;
 }
 }
 
@@ -201,9 +201,9 @@ footer {
   margin-top: 25px;
   padding-top: 1px;
   border-top: 1px solid black;
-  color: black;
+  color: white;
   a {
-    color: black;
+    color: white;
     &:hover {
       color: red;
     }
@@ -212,11 +212,11 @@ footer {
     float: left;
   }
   ul {
-    float: right;
+    float: left;
     list-style: none;
     li {
       float: left;
-      margin-left: 15px;
+      margin-left: 5px;
     }
   }
 }
@@ -228,12 +228,13 @@ footer {
 }
 
 .footer nav {
-  margin-right: 260px;
+  margin-right: 10px;
 }
 .inner-container {
   margin: 0 9em 1.5em 9em;
-  text-align: center;
-  margin-left: 400px;
+  text-align: left;
+  margin-left: 10px;
+  background-color: #8c1aff;
 }
 
 .body-container {
@@ -745,30 +746,49 @@ span.picture {
   padding-left: 5px;
 }
 
-@media only screen and (max-width : 800px)  { 
+.main_message {
+  text-align: center;
+  font-size: 4em;
+}
+
+
+@media only screen and (max-width: 800px) { 
     body {
       width: 800px;
         background-color: lightpink;
+        overflow-x: hidden !important;
     }
     header {
-      width: 800px;
+      width: 100%;
       height: 30px;
       background-color: #8c1aff;
     }
+    header.navbar {
+  background-color: #8c1aff;
+  height: 30px;
+}
+    
     .myNavbar {
-      width: 800px;
+      width: 100%;
       height: 30px;
       margin-right: 0px;
       background-color: #8c1aff;
       nav {
-        width: 600px;
-        height: 30px;
-        background-color: #8c1aff;
+        
+        ul {
+          float: left;
+          
+          li {
+            float: left;
+            
+          }
+        }
       }
       .container {
         width: 800px;
-        height: 35px;
+        height: 30px;
         background-color: #8c1aff;
+        float: left;
       }
     }
     .myNavbarz {
@@ -788,11 +808,11 @@ span.picture {
     }
     
   .span2 {
-    width: 800px;
+    width: 400px;
     float: left;
     padding-top: 15px;
     .search-form {
-      width: 600px;
+      width: 300px;
       padding-left: 10px;
       .before-buttons {
         width: 400px;
@@ -802,6 +822,10 @@ span.picture {
       }
     }
   }
+  .footer-wrappter {
+    float: left;
+  }
+  
   .buttons {
   position: left;
   float: left;
@@ -855,7 +879,7 @@ span.picture {
       margin-right: 0px;
       background-color: #8c1aff;
       nav {
-        width: 600px;
+        width: 400px;
         background-color: #8c1aff;
       }
       .container {
@@ -865,7 +889,7 @@ span.picture {
       }
     }
     .myNavbarz {
-      width: 600px;
+      width: 400px;
       margin-right: 0px;
       padding-left: 5px;
       padding-right: 5px;
@@ -914,3 +938,78 @@ span.picture {
 
 }
 
+@media only screen and (max-width: 480px) {
+
+  body {
+      width: 480px;
+        background-color: lightgreen;
+    }
+    header {
+      width: 480px;
+      height: 40px;
+    }
+    .myNavbar {
+      width: 480px;
+      height: 40px;
+      margin-right: 0px;
+      background-color: #8c1aff;
+      nav {
+        width: 400px;
+        background-color: #8c1aff;
+      }
+      .container {
+        width: 480px;
+        height: 35px;
+        background-color: #8c1aff;
+        
+      }
+    }
+    .myNavbarz {
+      width: 400px;
+      margin-right: 0px;
+      padding-left: 5px;
+      padding-right: 5px;
+      li {
+        width: 100px;
+        float: left;
+      }
+    }
+    
+
+  .span2 {
+    width: 300px;
+    float: left;
+    padding-top: 15px;
+    .search-form {
+      width: 200px;
+      padding-left: 10px;
+      .before-buttons {
+        width: 300px;
+      }
+    }
+  }
+  .buttons {
+  position: left;
+  float: left;
+  width: 100px;
+  padding: 3px 4px;
+  margin-left: 200px;
+  margin-top:  -50px;
+  background-color: transparent;
+  color: #207cca;
+  font-size: .3em;
+  font-weight: bold;
+}
+
+  .col-md-4 {
+    display: none;
+  }
+  
+  .col-md-8 {
+    padding-top: 15px;
+    h3 {
+      font-size: 1.57em;
+    }
+  }
+
+}

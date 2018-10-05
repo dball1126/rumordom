@@ -67,8 +67,6 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-  
-  
 
   def following
     @title = "Following"
@@ -94,7 +92,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, :terms_of_service)
     end
     
    #  Confirms a logged-in user.
