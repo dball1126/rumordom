@@ -20,16 +20,3 @@
 </ul>
 
 <%= will_paginate %>
-
-<div style='width: 800px;'>  
-  <div id="map" style='width: 800px; height: 400px;'></div>  
-</div>  
-
-<script type="text/javascript">
-      handler = Gmaps.build('Google');
-      handler.buildMap({ provider: { Zoom: 12 }, internal: {id: 'map'}}, function(){
-      markers = handler.addMarkers(<%=raw @businesses_default.to_json %>);
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-  handler.getMap().setZoom(18);
-      }); </script>

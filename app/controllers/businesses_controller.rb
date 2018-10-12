@@ -127,8 +127,11 @@ class BusinessesController < ApplicationController
         :locals => {:name => plot.name, :battery => @battery, :date => rand(6.months.ago..Time.now), :ip => @ip, :connected => @connected, :city => plot.city, :state => plot.state, :address1 => plot.address1, :zipcode => plot.zipcode, :id => plot.id })  
    end  
  end
+ 
+ 
   
   private
+  
   
   def set_business
       @business = Business.find(params[:id])

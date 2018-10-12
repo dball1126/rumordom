@@ -111,8 +111,8 @@ class Business < ApplicationRecord
       item.id
     end
   end
-  
-=end
+=end  
+
   
  # def routing1
 #    [latitude]
@@ -120,7 +120,7 @@ class Business < ApplicationRecord
 #  def routing2
 #    [longitude]
 #  end
-  
+    
   
   def full_address
     [address1, city, state, zipcode].join(', ')
