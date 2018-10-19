@@ -185,3 +185,9 @@ new.html.erb
         <span class="qty pull-right"><%= business.city.capitalize %>, <%= business.state.upcase %></span></li>
       </ul>
     </div>
+    
+    
+    problem: 
+    
+    work on Google API error: over query limit.  unsupported argument error 0 when you search
+    only when u do it by location.
