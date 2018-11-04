@@ -1,3 +1,4 @@
+=begin
 Geocoder.configure(
     #changed 10 24 18   trying to fix geocoder. ITS WORKS !!!!!
   :timeout=>20,
@@ -27,3 +28,4 @@ Geocoder.configure(
   :distances=>:linear
 
 )
+=end

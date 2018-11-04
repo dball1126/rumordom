@@ -1,5 +1,10 @@
 class Business < ApplicationRecord
   require 'csv'
+ acts_as_mappable :default_units => :miles,
+                   :default_formula => :sphere,
+                   :distance_field_name => :distance,
+                   :lat_column_name => :latitude,
+                   :lng_column_name => :longitude
   has_many   :experiences
   has_many   :reviews
   #belongs_to :category #added 5 14 18, class_name: "Person", optional: true
@@ -21,9 +26,11 @@ class Business < ApplicationRecord
   before_save :category2_id
   before_save :category2_id
   
-  
-  geocoded_by :full_address
-  after_validation :geocode
+  before_save :geocode_address
+  #geocoded_by :full_address
+  #Geokit::Geocoders::GoogleGeocoder.geocoded_by :full_address
+  #after_validation :Geokit::Geocoders::GoogleGeocoder.geocode
+  #after_validation :geocode
   
   mount_uploader :image, ImageUploader
   
@@ -114,22 +121,53 @@ class Business < ApplicationRecord
 =end  
 
   
- # def routing1
-#    [latitude]
-#  end
-#  def routing2
-#    [longitude]
-#  end
-    
-  
+  def routing1
+    latitude
+  end
+  def routing2
+    longitude
+  end
+
   def full_address
     [address1, city, state, zipcode].join(', ')
   end
   
+  # Finds within a distance radius.
+        def find_within(distance, options={})
+          options[:within] = distance
+          find(:all, options)
+        end
+  
+  
+  def geocode_address
+    
+    if latitude == nil || longitude == nil
+      geo = Geokit::Geocoders::MultiGeocoder.geocode full_address
+      self.latitude, self.longitude = geo.lat,geo.lng
+      self.save
+    end
+  end
+
+# Checks whether this object has been geocoded or not. Returns the truth
+def geocoded?
+  lat? && lng?
+end
+  
   def self.search(params)
     #businesses = Business.where(category_id: params[:category].to_i)
   businesses = Business.where("name like ? or city like ? or state like ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
-    businesses = businesses.near(params[:location], 20) if params[:location].present?
-    businesses
+    #businesses = businesses.near(params[:location], 20) if params[:location].present?
+    #businesses
+  #arr1 = []
+   #businesses.each do |x| 
+    #arr1 << x if x.include?("#{:location}")
+  #end
+  #businesses = arr1
+  #businesses
+  #oranges = businesses
+  #puts oranges
+  businesses = businesses.within(20, :origin => "#{params[:location]}")
+  businesses = businesses.sort_by{|x| x.distance_to("#{:location}")}
+  businesses
   end
 end

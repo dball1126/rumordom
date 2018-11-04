@@ -191,3 +191,10 @@ new.html.erb
     
     work on Google API error: over query limit.  unsupported argument error 0 when you search
     only when u do it by location.
+    
+    
+    
+    acts_as_mappable    work on this in rails 5
+    
+    
+  #  stores.sort_by{|s| s.distance_to("brooklyn")}

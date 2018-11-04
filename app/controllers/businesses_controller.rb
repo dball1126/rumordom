@@ -1,7 +1,8 @@
 class BusinessesController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :set_business, only: [:show, :edit, :update, :destroy]
-    
+  require 'will_paginate/array'
+  
   def index
     load_businesses
     @businesses = Business.paginate(page: params[:page])
@@ -72,6 +73,11 @@ class BusinessesController < ApplicationController
     
     #@businessz  = Business.search(params)
     @businesses = Business.search(params)
+   # Business.within(
+  #  params[:radius],
+  #  :units => :miles,
+  #  :origin => [params[:lat], params[:lng]]
+  #)
     load_businessz
   end
   
