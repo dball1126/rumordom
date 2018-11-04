@@ -235,7 +235,6 @@ GEM
       fog-core
       nokogiri (>= 1.5.11, < 2.0.0)
     formatador (0.2.5)
-    geocoder (1.4.9)
     geokit (1.13.1)
     geokit-rails (2.3.1)
       geokit (~> 1.5)
@@ -423,7 +422,6 @@ DEPENDENCIES
   coffee-rails (= 4.2.2)
   faker (= 1.7.3)
   fog (= 1.42)
-  geocoder (~> 1.4, >= 1.4.9)
   geokit (~> 1.13, >= 1.13.1)
   geokit-rails (~> 2.3, >= 2.3.1)
   gmaps4rails
