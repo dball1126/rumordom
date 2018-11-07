@@ -23,7 +23,7 @@ Category3: <%= Category.find(@business.category3_id).name %></br>
          <% y.each {|z| arr << z.business_id } %>
         <% if arr.include?(@business.id) %>
         <h4>Click for more Pictures about this Business</h4>
-        <br><%= image_tag y[0].picture.url %></br>
+        <br><%= image_tag y[0].picture.url if y[0].picture.present? %></br>
         <% else %>
         <%= link_to image_tag("http://placehold.it/200x200"), @business %>
          <% end %>
@@ -54,7 +54,7 @@ Category3: <%= Category.find(@business.category3_id).name %></br>
          <% y.each {|z| arr << z.business_id } %>
         <% if arr.include?(@business.id) %>
         <h4>Click for more Pictures about this Business</h4>
-        <br><%= image_tag y[0].picture.url %></br>
+        <br><%= image_tag y[0].picture.url if y[0].picture.present? %></br>
         <% else %>
         <%= link_to image_tag("http://placehold.it/200x200"), @business %>
          <% end %>

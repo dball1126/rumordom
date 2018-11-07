@@ -26,7 +26,7 @@ class Business < ApplicationRecord
   before_save :category2_id
   before_save :category2_id
   
-  before_save :geocode_address
+  #before_save :geocode_address
   #geocoded_by :full_address
   #Geokit::Geocoders::GoogleGeocoder.geocoded_by :full_address
   #after_validation :Geokit::Geocoders::GoogleGeocoder.geocode
@@ -118,7 +118,7 @@ class Business < ApplicationRecord
       item.id
     end
   end
-=end  
+=end
 
   
   def routing1

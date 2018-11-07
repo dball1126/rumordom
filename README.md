@@ -198,3 +198,27 @@ new.html.erb
     
     
   #  stores.sort_by{|s| s.distance_to("brooklyn")}
+  
+  scripts
+  
+  twoo.each do |x|
+  grades[x.name]=x.id
+  end
+  
+  zooo.each do |x|
+  x.category1_id=grades[x.category1]
+  end
+  
+  zooo.each do |x|
+  x.category2_id=grades[x.category2]
+  end
+  
+  zooo.each do |x|
+  x.category3_id=grades[x.category3]
+  end
+  
+  zooo.each{|x| x.category1_id=grades[category1]}
+  
+  zooo.each do |x|
+  x.save
+  end

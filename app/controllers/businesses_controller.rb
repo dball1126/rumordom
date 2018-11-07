@@ -134,7 +134,6 @@ class BusinessesController < ApplicationController
    end  
  end
  
- 
   
   private
   
@@ -160,7 +159,7 @@ class BusinessesController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
-  
+
   #def logged_in_user
    # unless logged_in?
     #  store_location
