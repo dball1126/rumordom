@@ -3,7 +3,7 @@
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        <%= gravatar_for @user %>
+        <%= @user.picture? ? (link_to image_tag(@user.picture.url, size: 50), @user) : (link_to image_tag("http://placehold.it/200x200", size: 50), @user) %>
         <%= @user.name %>
       </h1>
     </section>

@@ -1,4 +1,4 @@
-<%= link_to gravatar_for(current_user, size: 50), current_user %>
+<%= link_to image_tag(current_user.picture.url, size: 50) || link_to image_tag("http://placehold.it/200x200", size: 50) %>
 <h1><%= current_user.name %></h1>
 <span><%= link_to "view my profile", current_user %></span>
 <span><%= pluralize(current_user.experiences.count, "experience") %></span>

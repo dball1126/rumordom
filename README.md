@@ -187,6 +187,9 @@ new.html.erb
     </div>
     
     
+  <%= gravatar_for user, size: 50 %>
+    
+    
     problem: 
     
     work on Google API error: over query limit.  unsupported argument error 0 when you search
@@ -222,3 +225,5 @@ new.html.erb
   zooo.each do |x|
   x.save
   end
+  
+  

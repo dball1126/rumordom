@@ -1,5 +1,5 @@
 <li id="experience-<%= experience.id %>">
-  <%= link_to gravatar_for(experience.user, size: 50), experience.user %>
+  <%= experience.user.picture? ? (link_to image_tag(experience.user.picture.url, size: 50), experience.user) : (link_to image_tag("http://placehold.it/200x200", size: 50), experience.user) %>
   <span class="user"><%= link_to experience.user.name, experience.user %></span>
   <span class="comment"><%= experience.comment %>
                         <%= image_tag experience.picture.url if experience.picture? %>
