@@ -61,6 +61,19 @@ class BusinessesController < ApplicationController
     #@reviews = @user.reviews.paginate(page: params[:page])
     
   end
+  
+  def edit
+    @business = Business.find(params[:id])
+  end
+  
+  def update
+    if @business.update_attributes(business_params)
+      flash[:success] = "Profile updated"
+      redirect_to @business
+    else
+      render 'edit'
+    end
+  end
 
   def followerzs
     @title = "Followerzs"

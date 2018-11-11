@@ -27,6 +27,7 @@ class Business < ApplicationRecord
   before_save :category2_id
   
   before_save :geocode_address
+  after_validation :geocode_address, :if => :address1_changed?
   #geocoded_by :full_address
   #Geokit::Geocoders::GoogleGeocoder.geocoded_by :full_address
   #after_validation :Geokit::Geocoders::GoogleGeocoder.geocode
@@ -156,16 +157,6 @@ end
   def self.search(params)
     #businesses = Business.where(category_id: params[:category].to_i)
   businesses = Business.where("name like ? or city like ? or state like ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
-    #businesses = businesses.near(params[:location], 20) if params[:location].present?
-    #businesses
-  #arr1 = []
-   #businesses.each do |x| 
-    #arr1 << x if x.include?("#{:location}")
-  #end
-  #businesses = arr1
-  #businesses
-  #oranges = businesses
-  #puts oranges
   businesses = businesses.within(20, :origin => "#{params[:location]}")
   businesses = businesses.sort_by{|x| x.distance_to("#{:location}")}
   businesses
