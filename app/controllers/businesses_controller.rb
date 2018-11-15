@@ -83,9 +83,9 @@ class BusinessesController < ApplicationController
   end
 
   def search
-    
     #@businessz  = Business.search(params)
-    @businesses = Business.search(params)
+    #@businesses = Business.search(params)
+    @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30)
    # Business.within(
   #  params[:radius],
   #  :units => :miles,

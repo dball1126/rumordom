@@ -5,6 +5,7 @@
         <% if @businesses.blank? %>
           <h3>Couldn't find a business with your search criteria</h3>
           <% else %>
+          <%= will_paginate %>
           <div class="mapx">  
   <div id="map" style='width: 300px; height: 200px;'></div>  
 </div> 
@@ -38,3 +39,4 @@
 </div>
 </div>
 </div>
+<%= will_paginate %>
