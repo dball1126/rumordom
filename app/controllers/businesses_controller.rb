@@ -50,11 +50,8 @@ class BusinessesController < ApplicationController
   end
 
   def show
-    
-    
     @businessz = Business.paginate(page: params[:page])
     #redirect_to root_url and return unless @user.activated?
-    
     @experiences = Experience.where(business_id: @business)
     @reviews = Review.where(business_id: @business)
     #@experiences = @user.experiences.paginate(page: params[:page])
