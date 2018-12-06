@@ -220,10 +220,84 @@ new.html.erb
   x.category3_id=grades[x.category3]
   end
   
+  zooo.each do |x|
+  x.category1_id=0 if x.category1_id==nil
+  x.category2_id=0 if x.category2_id==nil
+  x.category3_id=0 if x.category3_id==nil
+  end
+  
   zooo.each{|x| x.category1_id=grades[category1]}
   
   zooo.each do |x|
   x.save
   end
   
+  FOR DELETION
+  Business.where("id > 11412 AND id < 60000").delete_all
   
+  Select range from array
+  bus=Business.all[10..100]
+  
+  Select specific from array
+  use=Business.find(1)
+  
+  
+  
+Business.where("id > 11413 AND id < 60000").delete_all
+
+num=11412
+zooo.each do |x|
+x.id=num
+num+=1
+end
+
+
+
+
+
+
+
+
+
+
+
+
+116061zoo
+
+79845
+
+
+num=11412
+zooo.each do |x|
+busz=Business.new
+busz.id=num
+busz.name=x.name
+busz.city=x.city
+busz.state=x.state
+busz.zipcode=x.zipcode
+busz.address1=x.address1
+busz.address2=x.address2
+busz.category1_id=x.category1_id
+busz.category2_id=x.category2_id
+busz.category3_id=x.category3_id
+busz.category1=x.category1
+busz.category2=x.category2
+busz.category3=x.category3
+busz.phone=x.phone
+busz.website=x.website
+busz.longitude=x.longitude
+busz.latitude=x.latitude
+busz.save
+num+=1
+end
+
+
+
+array=["Accounting & Tax Services", "Arts, Culture & Entertainment", "Auto Sales & Service", "Banking & Finance", "Business Services", "Community Organizations", "Dentists & Orthodontists", "Education", "Health & Wellness", "Health Care", "Home Improvement", "Insurance", "Internet & Web Services", "Legal Services", "Lodging & Travel", "Marketing & Advertising", "News & Media", "Pet Services", "Real Estate", "Restaurants & Nightlife", "Shopping & Retail", "Sports & Recreation", "Transportation", "Utilities", "Wedding", "Events & Meetings"]
+
+
+array.each do |x|
+cat=Category.new
+cat.name=x
+cat.save
+end

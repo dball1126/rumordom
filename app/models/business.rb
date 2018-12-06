@@ -19,15 +19,16 @@ class Business < ApplicationRecord
   has_many :followerzs, through: :passive_relationshipzs, source: :followerz
   
   validates_presence_of :full_address
-  validates_presence_of :category1_id
-  validates_presence_of :category2_id
-  validates_presence_of :category3_id
-  before_save :category1_id
-  before_save :category2_id
-  before_save :category2_id
+  
+  #validates_presence_of :category1_id
+  #validates_presence_of :category2_id
+  #validates_presence_of :category3_id
+  #before_save :category1_id
+  #before_save :category2_id
+  #before_save :category2_id
   
   before_save :geocode_address
-  after_validation :geocode_address, :if => :address1_changed?
+  #after_validation :geocode_address, :if => :address1_changed?
   #geocoded_by :full_address
   #Geokit::Geocoders::GoogleGeocoder.geocoded_by :full_address
   #after_validation :Geokit::Geocoders::GoogleGeocoder.geocode
@@ -74,6 +75,47 @@ class Business < ApplicationRecord
     else
       item = Category.new
       item.name = category1
+      item.save
+      item.id
+    end
+  end
+  
+  def category2_id
+    list_arr=[]
+    Category.all.to_a.each {|x| list_arr << x.name }
+    if list_arr.include?(category2)
+      i=0
+      list_arr.each{|x| 
+      if x == category2
+        i
+      else
+        i+=1
+      end }
+      i
+    else
+      item = Category.new
+      item.name = category2
+      item.save
+      item.id
+    end
+    10
+  end
+  
+  def category3_id
+    list_arr=[]
+    Category.all.to_a.each {|x| list_arr << x.name }
+    if list_arr.include?(category3)
+      i=0
+      list_arr.each{|x| 
+      if x == category3
+        i
+      else
+        i+=1
+      end }
+      i
+    else
+      item = Category.new
+      item.name = category3
       item.save
       item.id
     end
