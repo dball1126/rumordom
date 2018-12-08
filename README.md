@@ -241,7 +241,7 @@ new.html.erb
   Select specific from array
   use=Business.find(1)
   
-  
+  jjjjjjjjj
   
 Business.where("id > 11413 AND id < 60000").delete_all
 
