@@ -29,3 +29,203 @@ Processing by UsersController#new as HTML
   Rendered layouts/_footer.html.erb (0.6ms)
 Completed 200 OK in 5307ms (Views: 5293.5ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "businesses"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "businesses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address1" varchar, "address2" varchar, "city" varchar, "state" varchar, "zipcode" varchar, "phone" varchar, "website" varchar, "category1" varchar, "category2" varchar, "category3" varchar, "latitude" float, "longitude" float, "category1_id" integer, "category2_id" integer, "category3_id" integer)[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE  INDEX "index_businesses_on_category1_id" ON "businesses" ("category1_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_businesses_on_category1_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_businesses_on_category1_id' AND type='index'
+[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE  INDEX "index_businesses_on_category2_id" ON "businesses" ("category2_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_businesses_on_category2_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_businesses_on_category2_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_businesses_on_category1_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_businesses_on_category1_id' AND type='index'
+[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE  INDEX "index_businesses_on_category3_id" ON "businesses" ("category3_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories"[0m
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "experiences"[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "experiences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" varchar, "rating" integer, "business_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime, "picture" varchar)[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE  INDEX "index_experiences_on_business_id" ON "experiences" ("business_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_experiences_on_business_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_experiences_on_business_id' AND type='index'
+[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE  INDEX "index_experiences_on_user_id" ON "experiences" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "relationships"[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "relationships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "follower_id" integer, "followed_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE  INDEX "index_relationships_on_followed_id" ON "relationships" ("followed_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_relationships_on_follower_id_and_followed_id" ON "relationships" ("follower_id", "followed_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_follower_id_and_followed_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_follower_id_and_followed_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE  INDEX "index_relationships_on_follower_id" ON "relationships" ("follower_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "relationshipzs"[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE "relationshipzs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "followerz_id" integer, "followedz_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE  INDEX "index_relationshipzs_on_followedz_id" ON "relationshipzs" ("followedz_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationshipzs_on_followedz_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationshipzs_on_followedz_id' AND type='index'
+[0m
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_relationshipzs_on_followerz_id_and_followedz_id" ON "relationshipzs" ("followerz_id", "followedz_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationshipzs_on_followerz_id_and_followedz_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationshipzs_on_followerz_id_and_followedz_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationshipzs_on_followedz_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationshipzs_on_followedz_id' AND type='index'
+[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE  INDEX "index_relationshipzs_on_followerz_id" ON "relationshipzs" ("followerz_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews"[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "business_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "picture" varchar)[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_business_id_and_created_at" ON "reviews" ("business_id", "created_at")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_business_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_business_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_business_id" ON "reviews" ("business_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_business_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_business_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_business_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_business_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_user_id_and_created_at" ON "reviews" ("user_id", "created_at")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_business_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_business_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_business_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_business_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f', "activation_digest" varchar, "activated" boolean DEFAULT 'f', "activated_at" datetime, "reset_digest" varchar, "reset_sent_at" datetime, "picture" varchar)[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181107044413)[0m
+  [1m[35m (8.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180326041630),
+(20171228010327),
+(20180111230049),
+(20180129154436),
+(20180111232536),
+(20171211092048),
+(20180223031932),
+(20180112031228),
+(20180104005607),
+(20180401090020),
+(20180208041620),
+(20180310223707),
+(20180503041544),
+(20180128101414),
+(20180108101801),
+(20180322213726),
+(20180104005850),
+(20180210015551);
+
+[0m
+  [1m[35m (21.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-12-09 11:22:04.184855"], ["updated_at", "2018-12-09 11:22:04.184855"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "relationshipzs"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "relationshipzs" ("followerz_id", "followedz_id", "created_at", "updated_at", "id") VALUES (1, 1, '2018-12-09 11:22:04.439662', '2018-12-09 11:22:04.439662', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "relationshipzs" ("followerz_id", "followedz_id", "created_at", "updated_at", "id") VALUES (1, 1, '2018-12-09 11:22:04.439662', '2018-12-09 11:22:04.439662', 298486374)[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m

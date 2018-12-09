@@ -23,3 +23,9 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+production:
+  <<: *default
+  database: new_foodback_production
+  username: new_foodback
+  password: <%= ENV['NEW_FOODBACK_DATABASE_PASSWORD'] %>
