@@ -12,7 +12,7 @@
 
   <%= f.label :Choose_up_to_three_categories %>
   
-  <% @cat_cat=Category.all[5928..5953] %>
+  <% @cat_cat=Category.all[0..27] %>
   <% @cat_arr = @cat_cat.map{|f| [f.name, f.id] }.to_a.sort %>
   <% @cat_arr[0] = ["Not Available", 0] %>
 <%= f.select :category1_id, @cat_arr %>
