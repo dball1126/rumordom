@@ -27,7 +27,7 @@ class Business < ApplicationRecord
   #before_save :category2_id
   #before_save :category2_id
   
-  before_save :geocode_address
+  #before_save :geocode_address
   #after_validation :geocode_address, :if => :address1_changed?
   #geocoded_by :full_address
   #Geokit::Geocoders::GoogleGeocoder.geocoded_by :full_address
@@ -59,7 +59,7 @@ class Business < ApplicationRecord
      end
   end
 
-=begin
+
   def category1_id
     list_arr=[]
     Category.all.to_a.each {|x| list_arr << x.name }
@@ -161,7 +161,7 @@ class Business < ApplicationRecord
       item.id
     end
   end
-=end
+
 
   
   def routing1
