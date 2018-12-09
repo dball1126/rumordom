@@ -120,3 +120,407 @@ Processing by BusinessesController#index as HTML
 Completed 200 OK in 408ms (Views: 171.1ms | ActiveRecord: 39.4ms)
 
 
+Started GET "/" for 104.162.78.154 at 2018-12-09 09:27:13 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (4.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (88.4ms)
+  Rendered users/_follow_form.html.erb (0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE (business_id IN (SELECT followedz_id FROM relationshipzs
+                     WHERE  followerz_id = 1)
+                     OR business_id = 1)[0m
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE (business_id IN (SELECT followedz_id FROM relationshipzs
+                     WHERE  followerz_id = 1)
+                     OR business_id = 1) ORDER BY "experiences"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of experiences/_experience.html.erb [3 times] (9.3ms)
+  Rendered shared/_feed.html.erb (14.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (116.2ms)
+Completed 500 Internal Server Error in 332ms (ActiveRecord: 8.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:                         <%= image_tag experience.picture.url if experience.picture? %>
+     6:   </span>
+     7:     <div class="host">
+     8:     <%= link_to Business.find_by(id: experience.business_id).name, Business.find_by(id: experience.business_id) %>
+     9:     </div>
+    10:     <span class="timestamp">
+    11:     Posted <%= time_ago_in_words(experience.created_at) %> ago.
+  
+app/views/experiences/_experience.html.erb:8:in `_app_views_experiences__experience_html_erb___3103185588900198809_70004309929340'
+app/views/shared/_feed.html.erb:4:in `_app_views_shared__feed_html_erb__3815140879974364132_70004309993260'
+app/views/static_pages/home.html.erb:16:in `_app_views_static_pages_home_html_erb___1877762919660719671_48321580'
+Started GET "/signup" for 104.162.78.154 at 2018-12-09 09:27:43 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered users/_form.html.erb (448.5ms)
+  Rendered users/new.html.erb within layouts/application (450.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 960ms (Views: 957.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 104.162.78.154 at 2018-12-09 09:27:47 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Rr91PI2jUeRz1v5ddq6L5AiFt8A3LIJoUjHoYDnsFOK1nqD+HjYs+h58MWnCbT6urbOZfhX1AS5cc+PQrASHcA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://rails-tutorial-dball1126.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 104.162.78.154 at 2018-12-09 09:27:47 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 587ms (Views: 575.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 104.162.78.154 at 2018-12-09 09:27:51 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered users/_form.html.erb (593.3ms)
+  Rendered users/new.html.erb within layouts/application (595.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 776ms (Views: 726.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for 104.162.78.154 at 2018-12-09 09:29:05 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NMAHW1om9wl69sQ9mTnWa1MkcIZQKv+u5+SGQHvHglLH4dKZybOKFxdcCwkt+mMh9hJeOHLzfOjppo3w7i8RwA==", "user"=>{"name"=>"russ", "email"=>"russ@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "russ@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "russ"], ["email", "russ@gmail.com"], ["created_at", "2018-12-09 09:29:05.342322"], ["updated_at", "2018-12-09 09:29:05.342322"], ["password_digest", "$2a$10$4uTjp3H2e1Vsl3ZnxytXvuhTh0by85I5GrqO8xoofZSbZTAdFx0he"], ["activation_digest", "$2a$10$kuwxjFK3YmLs8ZFRxHSfqeT2TP7kiGNm5pXjj8hi3oo2jVuvVxzEe"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.9ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.6ms)
+UserMailer#account_activation: processed outbound mail in 328.4ms
+Sent mail to russ@gmail.com (21.8ms)
+Date: Sun, 09 Dec 2018 09:29:06 +0000
+From: noreply@example.com
+To: russ@gmail.com
+Message-ID: <5c0ce06239560_ecc1f0bbfc974ca@dball1126-rails-tutorial-4810864.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5c0ce0623575e_ecc1f0bbfc97386";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5c0ce0623575e_ecc1f0bbfc97386
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi russ,
+
+Welcome to Rumordom! Click on the link below to activate your account:
+
+https://rails-tutorial-dball1126.c9users.io/account_activations/RO6iZoptU-cWk8hUnF2NTw/edit?email=russ%40gmail.com
+
+----==_mimepart_5c0ce0623575e_ecc1f0bbfc97386
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Rumordom</h1>
+
+<p>Hi russ,</p>
+
+<p>
+Welcome to Rumordom! Click on the link below to activate your account:
+</p>
+
+<a href="https://rails-tutorial-dball1126.c9users.io/account_activations/RO6iZoptU-cWk8hUnF2NTw/edit?email=russ%40gmail.com">Activate</a>
+  </body>
+</html>
+
+----==_mimepart_5c0ce0623575e_ecc1f0bbfc97386--
+
+Redirected to https://rails-tutorial-dball1126.c9users.io/
+Completed 302 Found in 993ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/" for 104.162.78.154 at 2018-12-09 09:29:06 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered search/_form.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 263ms (Views: 255.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account_activations/RO6iZoptU-cWk8hUnF2NTw/edit?email=russ%40gmail.com" for 104.162.78.154 at 2018-12-09 09:29:14 +0000
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"russ@gmail.com", "id"=>"RO6iZoptU-cWk8hUnF2NTw"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "russ@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (12.5ms)[0m  [1m[33mUPDATE "users" SET "activated" = 't', "activated_at" = '2018-12-09 09:29:14.879379' WHERE "users"."id" = ?[0m  [["id", 4]]
+Redirected to https://rails-tutorial-dball1126.c9users.io/users/4
+Completed 302 Found in 95ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/users/4" for 104.162.78.154 at 2018-12-09 09:29:14 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 4]]
+  Rendered shared/_stats.html.erb (11.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered users/_follow_form.html.erb (1.0ms)
+  [1m[36mExperience Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "experiences" WHERE "experiences"."user_id" = ? LIMIT ?[0m  [["user_id", 4], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (29.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered search/_form.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 188ms (Views: 178.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/businesses" for 104.162.78.154 at 2018-12-09 09:29:22 +0000
+Processing by BusinessesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered businesses/_info.html.erb (1.0ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.3ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendering businesses/index.html.erb within layouts/application
+  [1m[35m (66.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses"[0m
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of businesses/_business.html.erb [30 times] (4.2ms)
+  Rendered businesses/index.html.erb within layouts/application (87.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered search/_form.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 411ms (Views: 168.4ms | ActiveRecord: 68.8ms)
+
+
+Started GET "/businesses" for 104.162.78.154 at 2018-12-09 09:29:46 +0000
+Processing by BusinessesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBusiness Load (1.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered businesses/_info.html.erb (1.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.3ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (20.5ms)
+  Rendered businesses/_info.html.erb (0.3ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.3ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.3ms)
+  Rendered businesses/_info.html.erb (0.3ms)
+  Rendering businesses/index.html.erb within layouts/application
+  [1m[35m (50.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses"[0m
+  [1m[36mCACHE Business Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of businesses/_business.html.erb [30 times] (7.3ms)
+  Rendered businesses/index.html.erb within layouts/application (76.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered search/_form.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 366ms (Views: 197.4ms | ActiveRecord: 52.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2018-12-09 09:29:56 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered shared/_user_info.html.erb (5.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 4]]
+  Rendered shared/_stats.html.erb (42.1ms)
+  Rendered users/_follow_form.html.erb (0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE (business_id IN (SELECT followedz_id FROM relationshipzs
+                     WHERE  followerz_id = 4)
+                     OR business_id = 4)[0m
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE (business_id IN (SELECT followedz_id FROM relationshipzs
+                     WHERE  followerz_id = 4)
+                     OR business_id = 4) ORDER BY "experiences"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of experiences/_experience.html.erb [1 times] (9.3ms)
+  Rendered shared/_feed.html.erb (13.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (68.1ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:                         <%= image_tag experience.picture.url if experience.picture? %>
+     6:   </span>
+     7:     <div class="host">
+     8:     <%= link_to Business.find_by(id: experience.business_id).name, Business.find_by(id: experience.business_id) %>
+     9:     </div>
+    10:     <span class="timestamp">
+    11:     Posted <%= time_ago_in_words(experience.created_at) %> ago.
+  
+app/views/experiences/_experience.html.erb:8:in `_app_views_experiences__experience_html_erb___3103185588900198809_70004327488500'
+app/views/shared/_feed.html.erb:4:in `_app_views_shared__feed_html_erb__3815140879974364132_70004312657080'
+app/views/static_pages/home.html.erb:16:in `_app_views_static_pages_home_html_erb___1877762919660719671_70004317745760'
+Started GET "/businesses/new" for 104.162.78.154 at 2018-12-09 09:30:53 +0000
+Processing by BusinessesController#new as HTML
+  Rendering businesses/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  [1m[36mCategory Load (15.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered businesses/new.html.erb within layouts/application (153.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered search/_form.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 321ms (Views: 301.7ms | ActiveRecord: 17.5ms)
+
+
+Started POST "/businesses" for 104.162.78.154 at 2018-12-09 09:31:14 +0000
+Processing by BusinessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L2ElMuYbAqLNKSndDKvJZnDP0WKjwiz63avu2+02mXLcQPDwdY5/vKCD5um4aHws1fn/3IEbr7zT6eVreN4K4A==", "business"=>{"name"=>"chinese pizza", "category1_id"=>"5933", "category2_id"=>"5942", "category3_id"=>"5944", "address1"=>"1649 10th ave", "address2"=>"", "city"=>"brooklyn", "state"=>"ny", "zipcode"=>"11215", "phone"=>"7687766897"}, "commit"=>"Create a business"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Multi geocoding. address: 1649 10th ave, brooklyn, ny, 11215, args []
+Google geocoding. address: 1649 10th ave, brooklyn, ny, 11215, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%221649%22%2C%0A+++++++++++++++%22short_name%22+%3A+%221649%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22street_number%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%2210th+Avenue%22%2C%0A+++++++++++++++%22short_name%22+%3A+%2210th+Ave%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22route%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Windsor+Terrace%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Windsor+Terrace%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22neighborhood%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%2211215%22%2C%0A+++++++++++++++%22short_name%22+%3A+%2211215%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22postal_code%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%226001%22%2C%0A+++++++++++++++%22short_name%22+%3A+%226001%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22postal_code_suffix%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%221649+10th+Ave%2C+Brooklyn%2C+NY+11215%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.658013%2C%0A+++++++++++++++%22lng%22+%3A+-73.9787664%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22RANGE_INTERPOLATED%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.65936198029149%2C%0A++++++++++++++++++%22lng%22+%3A+-73.9774174197085%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.65666401970849%2C%0A++++++++++++++++++%22lng%22+%3A+-73.98011538029151%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22EiYxNjQ5IDEwdGggQXZlLCBCcm9va2x5biwgTlkgMTEyMTUsIFVTQSIbEhkKFAoSCREq2OAeW8KJEf5f7I3gQTPvEPEM%22%2C%0A+++++++++%22types%22+%3A+%5B+%22street_address%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "address1", "address2", "city", "state", "zipcode", "phone", "latitude", "longitude", "category1_id", "category2_id", "category3_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "chinese pizza"], ["address1", "1649 10th ave"], ["address2", ""], ["city", "brooklyn"], ["state", "ny"], ["zipcode", "11215"], ["phone", "7687766897"], ["latitude", 40.658013], ["longitude", -73.9787664], ["category1_id", 5933], ["category2_id", 5942], ["category3_id", 5944]]
+  [1m[35m (129.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-tutorial-dball1126.c9users.io/businesses/1041857
+Completed 302 Found in 623ms (ActiveRecord: 131.9ms)
+
+
+Started GET "/businesses/1041857" for 104.162.78.154 at 2018-12-09 09:31:15 +0000
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"1041857"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1041857], ["LIMIT", 1]]
+  Rendering businesses/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5933], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5942], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5944], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBusiness Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ? AND "businesses"."id" = ? LIMIT ?[0m  [["followerz_id", 4], ["id", 1041857], ["LIMIT", 1]]
+  Rendered businesses/_followz.html.erb (10.2ms)
+  Rendered businesses/_followz_form.html.erb (19.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationshipzs" ON "users"."id" = "relationshipzs"."followerz_id" WHERE "relationshipzs"."followedz_id" = ?[0m  [["followedz_id", 1041857]]
+  Rendered shared/_statsz.html.erb (8.0ms)
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."business_id" = ? ORDER BY "experiences"."created_at" DESC[0m  [["business_id", 1041857]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5933], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5942], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5944], ["LIMIT", 1]]
+  [1m[36mCACHE Business Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ? AND "businesses"."id" = ? LIMIT ?[0m  [["followerz_id", 4], ["id", 1041857], ["LIMIT", 1]]
+  Rendered businesses/_followz.html.erb (1.5ms)
+  Rendered businesses/_followz_form.html.erb (4.2ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationshipzs" ON "users"."id" = "relationshipzs"."followerz_id" WHERE "relationshipzs"."followedz_id" = ?[0m  [["followedz_id", 1041857]]
+  Rendered shared/_statsz.html.erb (1.3ms)
+  [1m[36mCACHE Experience Load (0.0ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."business_id" = ? ORDER BY "experiences"."created_at" DESC[0m  [["business_id", 1041857]]
+  [1m[36mExperience Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "experiences" WHERE "experiences"."business_id" = ? LIMIT ?[0m  [["business_id", 1041857], ["LIMIT", 1]]
+  Rendered businesses/show.html.erb within layouts/application (64.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 208ms (Views: 198.3ms | ActiveRecord: 4.6ms)
+
+
+Started DELETE "/logout" for 104.162.78.154 at 2018-12-09 09:31:29 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h1r/mREec0mzs8oUskYINpQWXuEnav8PbFe6EhAZwyp0eypbgosOV94ZBSAGhb18MSBwXwWzfEliFbGihfFQuA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to https://rails-tutorial-dball1126.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 104.162.78.154 at 2018-12-09 09:31:29 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 137ms (Views: 135.0ms | ActiveRecord: 0.0ms)
+
+
