@@ -1581,3 +1581,113 @@ Processing by BusinessesController#show as HTML
 Completed 200 OK in 578ms (Views: 571.1ms | ActiveRecord: 3.7ms)
 
 
+Started GET "/" for 104.162.78.154 at 2018-12-14 00:23:25 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 1144ms (Views: 1131.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 104.162.78.154 at 2018-12-14 00:23:29 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (650.4ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 782ms (Views: 779.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2018-12-14 00:23:32 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EPkjVYKzspGesM8bwLtaaJ27Y71nI4MRrXqcF+Mo5M4qhTqPOof/DQs64NF0VD8Km3U6nJZ9TgKT4pBKpd7TgQ==", "session"=>{"email"=>"david@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "david@gmail.com"], ["LIMIT", 1]]
+Redirected to https://rails-tutorial-dball1126.c9users.io/users/1
+Completed 302 Found in 150ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for 104.162.78.154 at 2018-12-14 00:23:32 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (102.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_follow_form.html.erb (0.7ms)
+  [1m[36mExperience Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "experiences" WHERE "experiences"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."user_id" = ? ORDER BY "experiences"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of experiences/_experience.html.erb [3 times] (7.5ms)
+  Rendered users/show.html.erb within layouts/application (147.8ms)
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 5.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:                         <%= image_tag experience.picture.url if experience.picture? %>
+     6:   </span>
+     7:     <div class="host">
+     8:     <%= link_to Business.find_by(id: experience.business_id).name, Business.find_by(id: experience.business_id) %>
+     9:     </div>
+    10:     <span class="timestamp">
+    11:     Posted <%= time_ago_in_words(experience.created_at) %> ago.
+  
+app/views/experiences/_experience.html.erb:8:in `_app_views_experiences__experience_html_erb__378542583724098774_70145208531560'
+app/views/users/show.html.erb:20:in `_app_views_users_show_html_erb__3095930230244509900_70145205600280'
+Started GET "/businesses" for 104.162.78.154 at 2018-12-14 00:23:41 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBusiness Load (1.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered businesses/_info.html.erb (2.2ms)
+  Rendered businesses/_info.html.erb (0.3ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.3ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.1ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendered businesses/_info.html.erb (0.2ms)
+  Rendering businesses/index.html.erb within layouts/application
+  [1m[35m (37.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses"[0m
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of businesses/_business.html.erb [30 times] (6.8ms)
+  Rendered businesses/index.html.erb within layouts/application (486.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1494ms (Views: 1232.6ms | ActiveRecord: 41.6ms)
+
+
