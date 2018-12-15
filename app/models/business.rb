@@ -120,47 +120,7 @@ class Business < ApplicationRecord
     end
   end
   
-  def category2_id
-    list_arr=[]
-    Category.all.to_a.each {|x| list_arr << x.name }
-    if list_arr.include?(category2)
-      i=0
-      list_arr.each{|x| 
-      if x == category2
-        i
-      else
-        i+=1
-      end }
-      i
-    else
-      item = Category.new
-      item.name = category2
-      item.save
-      item.id
-    end
-  end
   
-  def category3_id
-    list_arr=[]
-    Category.all.to_a.each {|x| list_arr << x.name }
-    if list_arr.include?(category3)
-      i=0
-      list_arr.each{|x| 
-      if x == category3
-        i
-      else
-        i+=1
-      end }
-      i
-    else
-      item = Category.new
-      item.name = category3
-      item.save
-      item.id
-    end
-  end
-
-
   
   def routing1
     latitude
