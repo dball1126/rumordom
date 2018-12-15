@@ -10,7 +10,7 @@ class Business < ApplicationRecord
   #belongs_to :category #added 5 14 18, class_name: "Person", optional: true
   has_and_belongs_to_many :categories
   validates_presence_of :name
-  validates_uniqueness_of :city, scope: :product_id
+  validates_uniqueness_of :city
   validates_presence_of :city
   validates_presence_of :state
   
