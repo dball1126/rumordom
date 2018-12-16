@@ -26,6 +26,7 @@ class Business < ApplicationRecord
   #before_save :category1_id
   #before_save :category2_id
   #before_save :category2_id
+  before_save :duplicate_check
   
   #before_save :geocode_address
   #after_validation :geocode_address, :if => :address1_changed?
@@ -133,6 +134,16 @@ class Business < ApplicationRecord
 
   def full_address
     [address1, city, state, zipcode].join(', ')
+  end
+  
+  def duplicate_check
+    bus = Business.all.to_a
+    bus1 = bus.uniq
+   if bus == bus1
+     true
+   else 
+    false
+  end
   end
   
   # Finds within a distance radius.
