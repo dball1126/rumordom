@@ -98,6 +98,7 @@ class Business < ApplicationRecord
       item.save
       item.id
     end
+    10
   end
   
   def category3_id
@@ -118,6 +119,7 @@ class Business < ApplicationRecord
       item.save
       item.id
     end
+    10
   end
   
   
