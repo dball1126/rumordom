@@ -19,6 +19,7 @@ class Business < ApplicationRecord
   has_many :followerzs, through: :passive_relationshipzs, source: :followerz
   
   validates_presence_of :full_address
+  validates_presence_of :dup_name
   
   #validates_presence_of :category1_id
   #validates_presence_of :category2_id
@@ -99,7 +100,6 @@ class Business < ApplicationRecord
       item.save
       item.id
     end
-    10
   end
   
   def category3_id
@@ -120,7 +120,6 @@ class Business < ApplicationRecord
       item.save
       item.id
     end
-    10
   end
 =end
   
@@ -136,6 +135,11 @@ class Business < ApplicationRecord
     [address1, city, state, zipcode].join(', ')
   end
   
+  def dup_name
+    [name, address1, city, state, zipcode].join(', ')
+  end
+  
+=begin
   def duplicate_check
     bus = Business.all.to_a
     bus1 = bus.uniq
@@ -145,7 +149,7 @@ class Business < ApplicationRecord
     false
   end
   end
-  
+=end  
   # Finds within a distance radius.
         def find_within(distance, options={})
           options[:within] = distance
