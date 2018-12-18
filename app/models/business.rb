@@ -139,17 +139,13 @@ class Business < ApplicationRecord
     [name, address1, city, state, zipcode].join(', ')
   end
   
-=begin
+
   def duplicate_check
-    bus = Business.all.to_a
-    bus1 = bus.uniq
-   if bus == bus1
-     true
-   else 
-    false
+    arr = []
+    Business.all.to_a{|x| arr << x.dup_name}
+    self.save unless arr.include?(dup_name)
   end
-  end
-=end  
+  
   # Finds within a distance radius.
         def find_within(distance, options={})
           options[:within] = distance
