@@ -60,6 +60,7 @@ Rails.application.routes.draw do
   
   resources :businesses do
     collection { post :import }
+    collection :dup_name
   end
   
   
