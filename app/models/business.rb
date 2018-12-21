@@ -21,12 +21,12 @@ class Business < ApplicationRecord
   validates_presence_of :full_address
   #validates_presence_of :dup_name
   
-  validates_presence_of :category1_id
-  validates_presence_of :category2_id
-  validates_presence_of :category3_id
-  before_save :category1_id
-  before_save :category2_id
-  before_save :category2_id
+  #validates_presence_of :category1_id
+  #validates_presence_of :category2_id
+  #validates_presence_of :category3_id
+  #before_save :category1_id
+  #before_save :category2_id
+  #before_save :category2_id
   #before_save :duplicate_check
   
   #before_save :geocode_address
@@ -61,7 +61,7 @@ class Business < ApplicationRecord
      end
   end
 
-
+=begin
   def category1_id
     list_arr=[]
     Category.all.to_a.each {|x| list_arr << x.name }
@@ -121,7 +121,7 @@ class Business < ApplicationRecord
       item.id
     end
   end
-
+=end
   
   
   def routing1
