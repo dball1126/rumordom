@@ -208,6 +208,8 @@ new.html.erb
   grades[x.name]=x.id
   end
   
+  zooo=Business.where("id > 199999 AND id < 299999")
+  
   zooo.each do |x|
   x.category1_id=grades[x.category1]
   end
@@ -231,6 +233,11 @@ new.html.erb
   zooo.each do |x|
   x.save
   end
+    RUN FIND EACH BEFORE x.SAVE
+  	zooo.find_each do |x|
+  	x.save
+    end
+  
   
   FOR DELETION
   Business.where("id > 11412 AND id < 60000").delete_all
