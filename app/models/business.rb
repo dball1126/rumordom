@@ -61,7 +61,7 @@ class Business < ApplicationRecord
      end
   end
 
-=begin
+
   def category1_id
     list_arr=[]
     Category.all.to_a.each {|x| list_arr << x.name }
@@ -121,7 +121,7 @@ class Business < ApplicationRecord
       item.id
     end
   end
-=end
+
   
   
   def routing1
