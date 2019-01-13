@@ -1,18 +1,28 @@
+<% provide(:title, @user.name) %>
 <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-      <section class="stats">
-        <%= render 'shared/stats' %>
-        <%= render 'users/follow_form' if logged_in? %>
-      </section>
-      <%= link_to "Create a Business", businesses_new_path, class: "btn btn-lg btn-primary" %>
-    </aside>
-    <div class="col-md-8">
-      <h3>Experience Feed(Businesses) <%= link_to "Users", user_feed_path, class: "btn btn-lg btn-primary" %></h3>
-      
-      <%= render 'shared/feed' %>
-      
-    </div>
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @user.picture? ? (link_to image_tag(@user.picture.url, size: 50), @user) : (link_to image_tag("http://placehold.it/200x200", size: 50), @user) %>
+        <%= @user.name %>
+      </h1>
+    </section>
+    <section class="stats">
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+   
+    <%= render 'follow_form' if logged_in? %>
+    <% if @user.experiences.any? %>
+      <h3>Experiences (<%= @user.experiences.count %>)</h3>
+      <ol class="experiences">
+        <%= render @experiences %>
+      </ol>
+      <%= will_paginate @experiences %>
+      <% else %>
+      <h3><center>Your Feed is empty, go follow a business or user to start generating
+          a feed of recent customer interactions/experiences</center></h3>
+    <% end %> 
   </div>
+</div>
