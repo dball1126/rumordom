@@ -22,6 +22,7 @@ class ExperiencesController < ApplicationController
       @feed_items = []
       @feedz_items = []
     render 'static_pages/home'
+    render 'users/show'
     end
   end
   
