@@ -12,11 +12,6 @@
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
       <h3>Experience Feed(Businesses) <%= link_to "Users", user_feed_path, class: "btn btn-lg btn-primary" %></h3>
-      <% if @user.experiences.any? %>
-      <%= render 'shared/feedz' %>
-      <% else %>
-      <h3><center>Your Feed is empty, go follow a business or user to start generating
-          a feed of recent customer interactions/experiences</center></h3>
-    <% end %> 
+      <%= render 'shared/feed' %>
   </div>
 </div>
