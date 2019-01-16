@@ -2,7 +2,11 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <%= render 'shared/user_info' %>
+      <span><font color="#61d95e" size="4em">Rumor</font><font color="#e60000" size="4em">dom</font></span>
+<%= @user.picture? ? (link_to image_tag(@user.picture.url, size: 50), @user) : (link_to image_tag("http://placehold.it/200x200", size: 50), @user) %>
+<h1><%= @user.name %></h1>
+<span><%= link_to "view my profile", @user %></span>
+<span><%= pluralize(@user.experiences.count, "experience") %></span>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
