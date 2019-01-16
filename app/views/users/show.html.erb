@@ -10,17 +10,6 @@
     <%= link_to "Create a Business", businesses_new_path, class: "btn btn-lg btn-primary" %>
   </aside>
   <div class="col-md-8">
-    <div class="span2">
-    <div class="search-form" >
-    <div class="before-buttons", style="font-size:1.2em;">
-      <%= form_tag search_users_path, method: :get do |f| %>
-<%= text_field_tag :search, nil, placeholder: "Search for A User...." %>
-</div>
-<div class="buttons">
-<%= submit_tag "Search", class: "btn btn-md btn-primary" %>
-</div>
-<% end %>
-</div>
     <%= render 'follow_form' if logged_in? %>
       <% if @user.experiences.any? %>
       <h3>Experiences (<%= @user.experiences.count %>)</h3>
