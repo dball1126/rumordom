@@ -3,6 +3,7 @@ class UsersController < ApplicationController
                                         :following, :followers, :followingz]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
+  require 'will_paginate/array'
   
   def index
     @users = User.where(activated: true).paginate(page: params[:page])
@@ -88,6 +89,11 @@ class UsersController < ApplicationController
     @users = @user.followingz.paginate(page: params[:page])
     render 'show_followz'
   end
+  
+  def search
+    @users = User.search(params).paginate(:page => params[:page], :per_page => 30)
+  end
+  
   private
 
     def user_params

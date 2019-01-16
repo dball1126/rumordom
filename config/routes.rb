@@ -32,6 +32,9 @@ Rails.application.routes.draw do
     member do
       get :following, :followers, :followingz 
     end
+    collection do
+      get 'search'
+    end
   end
   
  # resources :businesses do

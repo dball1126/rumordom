@@ -157,7 +157,10 @@ class User < ApplicationRecord
     followingz.include?(other_business)
   end
   
-  
+  def self.search(params)
+  users = User.where("name ilike ?", "%#{params[:search]}%") if params[:search].present?
+  users
+  end
   
   private
 
