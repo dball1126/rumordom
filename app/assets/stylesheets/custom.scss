@@ -200,10 +200,6 @@ margin-left: -10px;
 footer {
   margin-top: 25px;
   padding-top: 1px;
-  padding-bottom: 3px;
-  position: absolute;
- bottom: 0;
- width: 100%;
   border-top: 1px solid black;
   color: white;
   a {
@@ -458,6 +454,7 @@ input {
 .users {
   list-style: none;
   margin: 0;
+  padding-bottom: 10px;
   li {
     overflow: auto;
     padding: 10px 0;
