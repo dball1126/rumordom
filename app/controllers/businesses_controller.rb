@@ -84,11 +84,12 @@ class BusinessesController < ApplicationController
     #@businessz  = Business.search(params)
     #@businesses = Business.search(params)
     @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30)
-   # Business.within(
-  #  params[:radius],
-  #  :units => :miles,
-  #  :origin => [params[:lat], params[:lng]]
-  #)
+    
+    Business.within(
+    params[:radius],
+    :units => :miles,
+    :origin => [params[:lat], params[:lng]])
+    
     load_businessz
   end
   
