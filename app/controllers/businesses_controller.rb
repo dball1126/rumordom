@@ -26,7 +26,7 @@ class BusinessesController < ApplicationController
   def new
     @business = Business.new #if logged_in?
     #@experience = Experience.new
-    redirect_to root_url and return unless @user.activated?
+    #redirect_to root_url and return unless @user.activated?
   end
 
   def create
