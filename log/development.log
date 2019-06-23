@@ -2368,3 +2368,358 @@ Completed 200 OK in 676ms (Views: 618.4ms | ActiveRecord: 0.9ms)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:29:18 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 4845ms (Views: 4833.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:30:38 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 307ms (Views: 294.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:34:50 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (33.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 188ms (Views: 185.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:35:47 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 1408ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...width: 1200px) ": expected "{", was ".container{"):
+    4:     <title>Rumordom</title>
+    5:     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= stylesheet_link_tag "application", media: "all" %>
+    8:     <%= javascript_include_tag "application" %>
+    9:     <script src="//maps.google.com/maps/api/js?key=AIzaSyCyWj7qH1UB7Ai6OsphBRePFnO0FcwlyTA"></script>
+   10: <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>  
+  
+app/assets/stylesheets/custom.scss:753
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___700300398892994464_43355500'
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:37:08 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 1461ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
+    4:     <title>Rumordom</title>
+    5:     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= stylesheet_link_tag "application", media: "all" %>
+    8:     <%= javascript_include_tag "application" %>
+    9:     <script src="//maps.google.com/maps/api/js?key=AIzaSyCyWj7qH1UB7Ai6OsphBRePFnO0FcwlyTA"></script>
+   10: <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>  
+  
+app/assets/stylesheets/custom.scss:1023
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___700300398892994464_69926432750440'
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:37:38 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 567ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
+    4:     <title>Rumordom</title>
+    5:     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= stylesheet_link_tag "application", media: "all" %>
+    8:     <%= javascript_include_tag "application" %>
+    9:     <script src="//maps.google.com/maps/api/js?key=AIzaSyCyWj7qH1UB7Ai6OsphBRePFnO0FcwlyTA"></script>
+   10: <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>  
+  
+app/assets/stylesheets/custom.scss:1023
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___700300398892994464_69926430521240'
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:37:50 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 2833ms (Views: 2830.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:38:02 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 80ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:38:36 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 2860ms (Views: 2858.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:38:41 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 227ms (Views: 225.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:39:17 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 3133ms (Views: 3131.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:39:27 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 104.162.78.154 at 2019-06-23 21:39:44 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (325.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 426ms (Views: 421.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:39:47 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Ew18lF1zM6vQaGuDxeTCnsg3vseSazK2JVNBl4QYitjgkYFe4a0+XJbYUdS1tc7hlzXrctjmR/D9Fcd4ns8wA==", "session"=>{"email"=>"david@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "david@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (395.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered search/_form.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 582ms (Views: 496.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 104.162.78.154 at 2019-06-23 21:40:24 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 96ms (Views: 95.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:40:26 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 201ms (Views: 199.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 104.162.78.154 at 2019-06-23 21:45:43 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 3000ms (Views: 2998.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 104.162.78.154 at 2019-06-23 21:45:50 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered search/_form.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 125ms (Views: 124.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:45:51 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VVY7X6+hUaNXi4DCHefWeYIBI58gsBYb9KQAMirZpsLKmEiohVIplIqRQCtAJpJIf30qyfWaI87vxRoplrL4KQ==", "session"=>{"email"=>"david@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "david@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 76.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:46:53 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gPkc13NtqQueOXG5ELIsznF9ooj3ykZRnHYsdISYSukfN28gWZ7RPEMjsVBNc2j/jAGr3iLgc4SHFzZvOPMUAg==", "session"=>{"email"=>"g.thirteen333@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "g.thirteen333@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 122ms (Views: 119.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:47:03 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YwhhH7EQqdrgMbfIH4SuZ+5kbXG6H5pzp6muXNZAxFL8xhLom+PR7T0rdyFCRepWExhkJ281r6a8yLRHaiuauQ==", "session"=>{"email"=>"g.thirteen333@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "g.thirteen333@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 94ms (Views: 91.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:47:05 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/zqOc8IlzuSNeB8XJ3ITaLvX7esxRgDoG3XKFJm3GXEMpnO5fvvDE8vIJUBXIx8X5NW4XnvLda7DM0z7g2Cjg==", "session"=>{"email"=>"david@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "david@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 83.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:47:08 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sQ+k38/cnnku7QN87c6x1Ce0lFos7Iwpj5eZ0hH/PWYuwdco5S/mTvP3w5WwD/Xl2sidDPnGufyU9oPJrZRjjQ==", "session"=>{"email"=>"balleto333@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "balleto333@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:47:10 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hQp0crewVBscUHMQAREW4NuVl4b+Mdf31tmm5nEmo64axAeFnUMsLMFKs/lc0FLRJume0Csb4iLNuLz9zU39RQ==", "session"=>{"email"=>"g@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "g@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 143ms (Views: 141.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:47:13 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FW2Xp3G7tiwMujr5OI8YMwfgwPisOIXIeTSNwrj4CWiKo+RQW0jOG9Gg+hBlTlwC+pzJrnkSsB1iVZfZBJNXgw==", "session"=>{"email"=>"determined1025@aol.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "determined1025@aol.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 105ms (Views: 102.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 104.162.78.154 at 2019-06-23 21:49:45 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered search/_form.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 120ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:49:46 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NpdTy4tiypYObQ7up6u6GSWztD5DbIIBq1F3FPPDrbGpWSA8oZGyodN3zgf6av4o2M+9aJZGt9SwMG0PT6jzWg==", "session"=>{"email"=>"david@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "david@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 109ms (Views: 105.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 104.162.78.154 at 2019-06-23 21:55:22 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FybpwsJodShWjWK29QUm1culWHDPu63iSKtYpXYW6h2I6Jo16JsNH4uXol+oxGLkNtlRJhqRmDdTykK+yn209g==", "session"=>{"email"=>"david@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "david@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered search/_form.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 151ms (Views: 147.9ms | ActiveRecord: 0.3ms)
+
+

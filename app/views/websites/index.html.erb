@@ -1,0 +1,11 @@
+<% provide(:title, 'All websites') %>
+<h1>All websites</h1>
+<%= link_to "Add A Website", businesses_new_path, class: "btn btn-lg btn-primary" %>
+
+<%= will_paginate %>
+
+<ul class="businesses">
+  <%= render @businesses %>
+</ul>
+
+<%= will_paginate %>

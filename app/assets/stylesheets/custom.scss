@@ -178,6 +178,9 @@ margin-left: -60px;
 
 footer.navbar {
   background-color: #8c1aff;
+  position: absolute;
+  bottom: 0;
+  width: 970px;
 }
 
 footer ul {
@@ -750,7 +753,11 @@ span.picture {
   text-align: center;
   font-size: 4em;
 }
-
+@media (min-width: 1200px) {
+  .container{
+  width: 970px;
+}
+}
 
 @media only screen and (max-width: 800px) { 
     body {
