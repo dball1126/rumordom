@@ -1,5 +1,5 @@
 class BusinessesController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :new]
   before_action :set_business, only: [:show, :edit, :update, :destroy]
   require 'will_paginate/array'
   
@@ -24,9 +24,10 @@ class BusinessesController < ApplicationController
 
 
   def new
+    
+    # redirect_to root_url and return unless @user.activated?
     @business = Business.new #if logged_in?
     #@experience = Experience.new
-    #redirect_to root_url and return unless @user.activated?
   end
 
   def create
@@ -83,14 +84,23 @@ class BusinessesController < ApplicationController
   def search
     #@businessz  = Business.search(params)
     #@businesses = Business.search(params)
+    search = params[:search]
+    location = params[:location]
+    if search == "" && location == ""
+      
+      
+       flash.now[:alert] = "You must enter search parameters"
+       
+    else
+      
     @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30)
-    
     #Business.within(
     #params[:radius],
     #:units => :miles,
     #:origin => [params[:lat], params[:lng]])
     
     load_businessz
+    end
   end
   
   def load_businesses 
