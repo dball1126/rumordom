@@ -92,14 +92,18 @@ class BusinessesController < ApplicationController
     #    flash.now[:alert] = "You must enter search parameters"
        
     # else
-      
-    @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30, :total_entries => 1000)
+      if params[:page].to_i > 1000
+        @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30, :total_entries => 1000)
+        load_businessz
+      else 
+        @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30)
+        load_businessz
+      end
     #Business.within(
     #params[:radius],
     #:units => :miles,
     #:origin => [params[:lat], params[:lng]])
     
-    load_businessz
     # end
   end
   
