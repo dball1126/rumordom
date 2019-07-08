@@ -197,14 +197,15 @@ end
                  businesses
                 
              else
-
+              begin
               businesses = businesses.within(4, :origin => "#{location1}")
               businesses = businesses.sort_by{|x| x.distance_to("#{:location1}")}
-            end
-
-              rescue Geokit::Geocoders::GeocodeError
-              print "Search results must be more specific"
               businesses
+            rescue Geokit::Geocoders::GeocodeError
+            print "Search results must be more specific"
+            businesses
+            end
+            end
               
             end
         end
