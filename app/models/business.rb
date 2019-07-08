@@ -177,7 +177,7 @@ end
                 string = "LOWER(city) LIKE '%#{string.downcase}%'" + (" OR ") + ("LOWER(state) LIKE '%#{string.downcase}%'")
             end.join(" OR ")
             
-            location1Businesses = Business.limit(1000).where('(' + location1String + ')')
+            location1Businesses = Business.where('(' + location1String + ')')
 
             queryString = query.split(' ').map do |string|
                 string = "LOWER(name) LIKE '%#{string.downcase}%'"
@@ -187,10 +187,10 @@ end
           elsif query == ""
             
             location1String = location1.split(' ').map do |string|
-                string = "LOWER(city) LIKE '%#{string.downcase}%'" + (" OR ") + ("LOWER(state) LIKE '%#{string.downcase}%'")
+                string = "LOWER(city) LIKE '%#{"new york"}%'" + (" AND ") + ("zipcode LIKE '%#{"10018"}%'")
             end.join(" OR ")
             
-            businesses = Business.limit(1000).where('(' + location1String + ')')
+            businesses = Business.where('(' + location1String + ')')
           end
 
              if businesses.empty?
