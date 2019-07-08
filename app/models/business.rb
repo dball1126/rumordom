@@ -198,7 +198,7 @@ end
                 
              else
               begin
-              businesses = businesses.within(4, :origin => "#{location1}")
+              businesses = businesses.within(1, :origin => "#{location1}")
               businesses = businesses.sort_by{|x| x.distance_to("#{:location1}")}
               businesses
             rescue Geokit::Geocoders::GeocodeError
