@@ -84,14 +84,14 @@ class BusinessesController < ApplicationController
   def search
     #@businessz  = Business.search(params)
     #@businesses = Business.search(params)
-    search = params[:search]
-    location = params[:location]
-    if search == "" && location == ""
+    # search = params[:search]
+    # location = params[:location]
+    # if search == "" && location == ""
       
       
-       flash.now[:alert] = "You must enter search parameters"
+    #    flash.now[:alert] = "You must enter search parameters"
        
-    else
+    # else
       
     @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30)
     #Business.within(
@@ -100,7 +100,7 @@ class BusinessesController < ApplicationController
     #:origin => [params[:lat], params[:lng]])
     
     load_businessz
-    end
+    # end
   end
   
   def load_businesses 

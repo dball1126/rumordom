@@ -161,21 +161,57 @@ end
   
   def self.search(params)
     #businesses = Business.where(category_id: params[:category].to_i)
-    search = params[:search]
-    location = params[:location]
-   location = "new york ny" if location == ""
-      
-  businesses = Business.where("name ilike ? and city ilike ? and state ilike ?", "%#{search}%", "%#{location}%", "%#{location}%") if search.present?
-  
-   if businesses == nil
-    businesses = Business.where("city ilike ? or state ilike ?", "%#{location}", "%#{location}")
-   end
+    debugger
+    query = params[:query]
+    location1 = params[:location]
     
-    businesses = businesses.within(4, :origin => "#{location}")
+   location1 = "brooklyn" if location == ""
+      
+  #  businesses = Business.where("name ilike ? and city ilike ? and state ilike ?", "%#{query}%", "%#{location}%", "%#{location}%") if query.present?
+    debugger
+
   
-  businesses = businesses.sort_by{|x| x.distance_to("#{:location}")}
-  rescue Geokit::Geocoders::GeocodeError
-  print "Search results must be more specific"
-  businesses
-  end
-end
+        if query != ""
+
+            location1String = location1.split(' ').map do |string|
+                string = "LOWER(city) LIKE '%#{string.downcase}%'" + (" OR ") + ("LOWER(state) LIKE '%#{string.downcase}%'")
+            end.join(" OR ")
+            
+            location1Businesses = Business.where('(' + location1String + ')')
+
+            queryString = query.split(' ').map do |string|
+                string = "LOWER(name) LIKE '%#{string.downcase}%'"
+            end.join(" OR ")
+            businesses = location1Businesses.where('(' + queryString + ')')
+
+          elsif query == ""
+
+            location1String = location1.split(' ').map do |string|
+                string = "LOWER(city) LIKE '%#{string.downcase}%'" + (" OR ") + ("LOWER(state) LIKE '%#{string.downcase}%'")
+            end.join(" OR ")
+            
+            businesses = Business.where('(' + location1String + ')')
+          end
+
+             if businesses.empty?
+                 businesses
+                
+             else
+
+              businesses = businesses.within(4, :origin => "#{location1}")
+              businesses = businesses.sort_by{|x| x.distance_to("#{:location1}")}
+            end
+            
+              rescue Geokit::Geocoders::GeocodeError
+              print "Search results must be more specific"
+              businesses
+              
+            end
+        end
+
+
+  #  if businesses == nil
+  #   businesses = Business.where("city ilike ? or state ilike ?", "%#{location1}", "%#{location1}")
+  #  end
+    
+    

@@ -6415,3 +6415,617 @@ Started POST "/__better_errors/f22c17a4cae7d06b/variables" for 127.0.0.1 at 2019
           SIN(0.709968146793639)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
           END)
           <= 4)) LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:37:50 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered search/_form.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 474ms (Views: 459.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:38:03 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 109.3ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=newyork+ny&commit=Search" for 127.0.0.1 at 2019-07-08 14:38:11 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"newyork ny", "commit"=>"Search"}
+Multi geocoding. address: newyork ny, args []
+Google geocoding. address: newyork ny, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22New+York%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.9175771%2C%0A++++++++++++++++++%22lng%22+%3A+-73.70027209999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.4773991%2C%0A++++++++++++++++++%22lng%22+%3A+-74.25908989999999%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.7127753%2C%0A+++++++++++++++%22lng%22+%3A+-74.0059728%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.9175771%2C%0A++++++++++++++++++%22lng%22+%3A+-73.70027209999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.4773991%2C%0A++++++++++++++++++%22lng%22+%3A+-74.25908989999999%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJOwg_06VPwokRYv534QaPC8g%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Multi geocoding. address: newyork ny, args []
+Google geocoding. address: newyork ny, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22New+York%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.9175771%2C%0A++++++++++++++++++%22lng%22+%3A+-73.70027209999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.4773991%2C%0A++++++++++++++++++%22lng%22+%3A+-74.25908989999999%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.7127753%2C%0A+++++++++++++++%22lng%22+%3A+-74.0059728%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.9175771%2C%0A++++++++++++++++++%22lng%22+%3A+-73.70027209999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.4773991%2C%0A++++++++++++++++++%22lng%22+%3A+-74.25908989999999%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJOwg_06VPwokRYv534QaPC8g%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mBusiness Load (0.8ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses" WHERE (name ilike '%chinese%' and city ilike '%newyork ny%' and state ilike '%newyork ny%') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.65494735885856 AND businesses.latitude<40.770603241141444 AND businesses.longitude>-74.08226405598793 AND businesses.longitude<-73.92968154401207) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.7105719766096221)*COS(-1.291647891501367)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.7105719766096221)*SIN(-1.291647891501367)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.7105719766096221)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4))[0m
+Completed 500 Internal Server Error in 744ms (ActiveRecord: 1.2ms)
+
+
+
+SQLite3::SQLException - near "ilike": syntax error:
+  app/models/business.rb:176:in `search'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/8ac6866bb099d804/variables" for 127.0.0.1 at 2019-07-08 14:38:12 -0400
+  [1m[36mBusiness Load (0.5ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE (name ilike '%chinese%' and city ilike '%newyork ny%' and state ilike '%newyork ny%') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.65494735885856 AND businesses.latitude<40.770603241141444 AND businesses.longitude>-74.08226405598793 AND businesses.longitude<-73.92968154401207) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.7105719766096221)*COS(-1.291647891501367)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.7105719766096221)*SIN(-1.291647891501367)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.7105719766096221)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4)) LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:38:27 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 103ms (Views: 101.3ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=new+york+ny&commit=Search" for 127.0.0.1 at 2019-07-08 14:38:33 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"new york ny", "commit"=>"Search"}
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=new+york+ny&commit=Search" for 127.0.0.1 at 2019-07-08 14:39:45 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"new york ny", "commit"=>"Search"}
+Multi geocoding. address: new york ny, args []
+Google geocoding. address: new york ny, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22New+York%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.9175771%2C%0A++++++++++++++++++%22lng%22+%3A+-73.70027209999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.4773991%2C%0A++++++++++++++++++%22lng%22+%3A+-74.25908989999999%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.7127753%2C%0A+++++++++++++++%22lng%22+%3A+-74.0059728%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.9175771%2C%0A++++++++++++++++++%22lng%22+%3A+-73.70027209999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.4773991%2C%0A++++++++++++++++++%22lng%22+%3A+-74.25908989999999%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJOwg_06VPwokRYv534QaPC8g%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Multi geocoding. address: new york ny, args []
+Google geocoding. address: new york ny, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22New+York%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.9175771%2C%0A++++++++++++++++++%22lng%22+%3A+-73.70027209999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.4773991%2C%0A++++++++++++++++++%22lng%22+%3A+-74.25908989999999%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.7127753%2C%0A+++++++++++++++%22lng%22+%3A+-74.0059728%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.9175771%2C%0A++++++++++++++++++%22lng%22+%3A+-73.70027209999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.4773991%2C%0A++++++++++++++++++%22lng%22+%3A+-74.25908989999999%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJOwg_06VPwokRYv534QaPC8g%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mBusiness Load (1.3ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses" WHERE (name ilike '%chinese%' and city ilike '%new york ny%' and state ilike '%new york ny%') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.65494735885856 AND businesses.latitude<40.770603241141444 AND businesses.longitude>-74.08226405598793 AND businesses.longitude<-73.92968154401207) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.7105719766096221)*COS(-1.291647891501367)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.7105719766096221)*SIN(-1.291647891501367)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.7105719766096221)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4))[0m
+Completed 500 Internal Server Error in 4482ms (ActiveRecord: 1.3ms)
+
+
+
+SQLite3::SQLException - near "ilike": syntax error:
+  app/models/business.rb:177:in `search'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/2cbc0984225561f8/variables" for 127.0.0.1 at 2019-07-08 14:39:50 -0400
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE (name ilike '%chinese%' and city ilike '%new york ny%' and state ilike '%new york ny%') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.65494735885856 AND businesses.latitude<40.770603241141444 AND businesses.longitude>-74.08226405598793 AND businesses.longitude<-73.92968154401207) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.7105719766096221)*COS(-1.291647891501367)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.7105719766096221)*SIN(-1.291647891501367)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.7105719766096221)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4)) LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:51:07 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (26.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered search/_form.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 496ms (Views: 482.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 14:51:21 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Multi geocoding. address: brooklyn ny, args []
+Google geocoding. address: brooklyn ny, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Brooklyn%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.6781784%2C%0A+++++++++++++++%22lng%22+%3A+-73.94415789999999%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJCSF8lBZEwokRhngABHRcdoI%22%2C%0A+++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Multi geocoding. address: brooklyn ny, args []
+Google geocoding. address: brooklyn ny, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Brooklyn%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.6781784%2C%0A+++++++++++++++%22lng%22+%3A+-73.94415789999999%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJCSF8lBZEwokRhngABHRcdoI%22%2C%0A+++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses" WHERE (name ilike '%chinese%' and city ilike '%brooklyn ny%' and state ilike '%brooklyn ny%') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.62035045885856 AND businesses.latitude<40.736006341141426 AND businesses.longitude>-74.02040954882901 AND businesses.longitude<-73.867906251171) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.709968146793639)*COS(-1.290569017969576)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.709968146793639)*SIN(-1.290569017969576)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.709968146793639)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4))[0m
+Completed 500 Internal Server Error in 47525ms (ActiveRecord: 0.7ms)
+
+
+
+SQLite3::SQLException - near "ilike": syntax error:
+  app/models/business.rb:178:in `search'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/5ac551d2409545b4/variables" for 127.0.0.1 at 2019-07-08 14:52:08 -0400
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE (name ilike '%chinese%' and city ilike '%brooklyn ny%' and state ilike '%brooklyn ny%') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.62035045885856 AND businesses.latitude<40.736006341141426 AND businesses.longitude>-74.02040954882901 AND businesses.longitude<-73.867906251171) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.709968146793639)*COS(-1.290569017969576)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.709968146793639)*SIN(-1.290569017969576)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.709968146793639)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4)) LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:56:38 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 522ms (Views: 508.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:56:40 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 105ms (Views: 103.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=ny+new+york&commit=Search" for 127.0.0.1 at 2019-07-08 14:56:53 -0400
+
+SyntaxError - syntax error, unexpected keyword_end, expecting end-of-input:
+  app/controllers/businesses_controller.rb:192:in `'
+
+Started POST "/__better_errors/8b53e7d3a0d0b475/variables" for 127.0.0.1 at 2019-07-08 14:56:54 -0400
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=ny+new+york&commit=Search" for 127.0.0.1 at 2019-07-08 14:57:16 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"ny new york", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_rescue, expecting keyword_end
+  rescue Geokit::Geocoders::GeocodeEr...
+  ^~~~~~
+/Users/danielball/Desktop/rumordom/app/models/business.rb:188: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/models/business.rb:184:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/cf6c0c37cb8b07cb/variables" for 127.0.0.1 at 2019-07-08 14:57:16 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:57:18 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 107.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:57:21 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 101ms (Views: 99.0ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+new+york&commit=Search" for 127.0.0.1 at 2019-07-08 14:57:31 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn new york", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_rescue, expecting keyword_end
+  rescue Geokit::Geocoders::GeocodeEr...
+  ^~~~~~
+/Users/danielball/Desktop/rumordom/app/models/business.rb:188: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/models/business.rb:184:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/52041c9c76fe4354/variables" for 127.0.0.1 at 2019-07-08 14:57:31 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:58:00 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered search/_form.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 98ms (Views: 96.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:58:01 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 104.4ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=new+york&commit=Search" for 127.0.0.1 at 2019-07-08 14:58:06 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"new york", "commit"=>"Search"}
+Completed 500 Internal Server Error in 2ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_rescue, expecting keyword_end
+  rescue Geokit::Geocoders::GeocodeEr...
+  ^~~~~~
+/Users/danielball/Desktop/rumordom/app/models/business.rb:188: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/models/business.rb:184:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/13f4e78cfab8d765/variables" for 127.0.0.1 at 2019-07-08 14:58:06 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:58:46 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered search/_form.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 102ms (Views: 99.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:58:48 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 107ms (Views: 104.4ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 14:58:52 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Multi geocoding. address: brooklyn ny, args []
+Google geocoding. address: brooklyn ny, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Brooklyn%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.6781784%2C%0A+++++++++++++++%22lng%22+%3A+-73.94415789999999%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJCSF8lBZEwokRhngABHRcdoI%22%2C%0A+++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Multi geocoding. address: brooklyn ny, args []
+Google geocoding. address: brooklyn ny, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Brooklyn%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.6781784%2C%0A+++++++++++++++%22lng%22+%3A+-73.94415789999999%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJCSF8lBZEwokRhngABHRcdoI%22%2C%0A+++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses" WHERE (city ilike '%brooklyn ny' or state ilike '%brooklyn ny') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.62035045885856 AND businesses.latitude<40.736006341141426 AND businesses.longitude>-74.02040954882901 AND businesses.longitude<-73.867906251171) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.709968146793639)*COS(-1.290569017969576)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.709968146793639)*SIN(-1.290569017969576)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.709968146793639)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4))[0m
+Completed 500 Internal Server Error in 79130ms (ActiveRecord: 1.2ms)
+
+
+
+SQLite3::SQLException - near "ilike": syntax error:
+  app/models/business.rb:183:in `search'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/d6b2a0bfacdac94e/variables" for 127.0.0.1 at 2019-07-08 15:00:11 -0400
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE (city ilike '%brooklyn ny' or state ilike '%brooklyn ny') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.62035045885856 AND businesses.latitude<40.736006341141426 AND businesses.longitude>-74.02040954882901 AND businesses.longitude<-73.867906251171) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.709968146793639)*COS(-1.290569017969576)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.709968146793639)*SIN(-1.290569017969576)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.709968146793639)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4)) LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:19:50 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 105.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:19:53 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered search/_form.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 102.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:20:27 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 101.9ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn%2C+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:20:33 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn, ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_rescue, expecting keyword_end
+              rescue Geokit::Geocoders::GeocodeEr...
+              ^~~~~~
+/Users/danielball/Desktop/rumordom/app/models/business.rb:218: syntax error, unexpected keyword_end, expecting end-of-input:
+  app/models/business.rb:204:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/403edb2196f75d54/variables" for 127.0.0.1 at 2019-07-08 15:20:33 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:21:17 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered search/_form.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 105ms (Views: 103.1ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn%2C+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:21:21 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn, ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_rescue, expecting keyword_end
+              rescue Geokit::Geocoders::GeocodeEr...
+              ^~~~~~:
+  app/models/business.rb:204:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/5ed247b9c47ac248/variables" for 127.0.0.1 at 2019-07-08 15:21:21 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:21:43 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 104ms (Views: 102.5ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:21:47 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 2ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_rescue, expecting keyword_end
+              rescue Geokit::Geocoders::GeocodeEr...
+              ^~~~~~
+/Users/danielball/Desktop/rumordom/app/models/business.rb:218: syntax error, unexpected keyword_end, expecting end-of-input:
+  app/models/business.rb:204:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/815deaa8fd74d29e/variables" for 127.0.0.1 at 2019-07-08 15:21:47 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:24:16 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 105ms (Views: 103.3ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn%2C+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:24:21 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn, ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 2ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_end, expecting end-of-input:
+  app/models/business.rb:217:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/163544478c84ae29/variables" for 127.0.0.1 at 2019-07-08 15:24:21 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:24:34 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 104.8ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:24:39 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:24:43 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 19853ms
+
+
+
+NameError - undefined local variable or method `location' for Business (call 'Business.connection' to establish a connection):Class:
+  app/models/business.rb:168:in `search'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:25:05 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered search/_form.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 102ms (Views: 100.1ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:25:10 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 2ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_rescue, expecting keyword_end
+              rescue Geokit::Geocoders::GeocodeEr...
+              ^~~~~~:
+  app/models/business.rb:203:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/bf27ec0d065dd1c4/variables" for 127.0.0.1 at 2019-07-08 15:25:10 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:25:59 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered search/_form.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 117ms (Views: 114.9ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:26:03 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_rescue, expecting keyword_end
+              rescue Geokit::Geocoders::GeocodeEr...
+              ^~~~~~:
+  app/models/business.rb:203:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/a080d3f6ee6b0cd3/variables" for 127.0.0.1 at 2019-07-08 15:26:03 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:26:25 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 107ms (Views: 105.5ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brookln+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:26:29 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brookln ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_rescue, expecting keyword_end
+              rescue Geokit::Geocoders::GeocodeEr...
+              ^~~~~~
+/Users/danielball/Desktop/rumordom/app/models/business.rb:209: syntax error, unexpected keyword_end, expecting end-of-input
+        end
+        ^~~:
+  app/models/business.rb:203:in `'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/f9197a4cc606c5f9/variables" for 127.0.0.1 at 2019-07-08 15:26:29 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:27:18 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered search/_form.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 584ms (Views: 570.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:27:20 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 115ms (Views: 113.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:27:24 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 7035ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `location' for #<Class:0x00007fe26a9086d0>:
+  app/models/business.rb:168:in `search'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/c5cd05c7d4c655da/variables" for 127.0.0.1 at 2019-07-08 15:27:31 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:28:37 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered search/_form.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 104.5ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:28:38 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Started GET "/" for 127.0.0.1 at 2019-07-08 15:28:43 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered search/_form.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 117ms (Views: 115.1ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 15:28:47 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Completed 500 Internal Server Error in 4953ms
+
+
+
+NameError - undefined local variable or method `location' for Business (call 'Business.connection' to establish a connection):Class:
+  app/models/business.rb:168:in `search'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/5258ff97a64bec31/variables" for 127.0.0.1 at 2019-07-08 15:28:52 -0400
