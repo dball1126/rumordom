@@ -185,7 +185,7 @@ end
             businesses = location1Businesses.where('(' + queryString + ')')
 
           elsif query == ""
-
+            
             location1String = location1.split(' ').map do |string|
                 string = "LOWER(city) LIKE '%#{string.downcase}%'" + (" OR ") + ("LOWER(state) LIKE '%#{string.downcase}%'")
             end.join(" OR ")
