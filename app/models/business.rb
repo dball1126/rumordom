@@ -165,7 +165,7 @@ end
     query = params[:query]
     location1 = params[:location]
     
-   location1 = "brooklyn" if location == ""
+   location1 = "brooklyn" if location1 == ""
       
   #  businesses = Business.where("name ilike ? and city ilike ? and state ilike ?", "%#{query}%", "%#{location}%", "%#{location}%") if query.present?
     
