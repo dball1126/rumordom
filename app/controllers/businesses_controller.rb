@@ -93,7 +93,7 @@ class BusinessesController < ApplicationController
        
     # else
       
-    @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30)
+    @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30, :total_entries => 1000)
     #Business.within(
     #params[:radius],
     #:units => :miles,
