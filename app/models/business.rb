@@ -161,14 +161,14 @@ end
   
   def self.search(params)
     #businesses = Business.where(category_id: params[:category].to_i)
-    debugger
+    
     query = params[:query]
     location1 = params[:location]
     
    location1 = "brooklyn" if location == ""
       
   #  businesses = Business.where("name ilike ? and city ilike ? and state ilike ?", "%#{query}%", "%#{location}%", "%#{location}%") if query.present?
-    debugger
+    
 
   
         if query != ""
@@ -201,7 +201,7 @@ end
               businesses = businesses.within(4, :origin => "#{location1}")
               businesses = businesses.sort_by{|x| x.distance_to("#{:location1}")}
             end
-            
+
               rescue Geokit::Geocoders::GeocodeError
               print "Search results must be more specific"
               businesses
