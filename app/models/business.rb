@@ -162,7 +162,7 @@ end
   def self.search(params)
     #businesses = Business.where(category_id: params[:category].to_i)
     
-    query = params[:query]
+    query = params[:search]
     location1 = params[:location]
     
    location1 = "brooklyn" if location1 == ""

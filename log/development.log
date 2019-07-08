@@ -7029,3 +7029,22 @@ NameError - undefined local variable or method `location' for Business (call 'Bu
   app/controllers/businesses_controller.rb:96:in `search'
 
 Started POST "/__better_errors/5258ff97a64bec31/variables" for 127.0.0.1 at 2019-07-08 15:28:52 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 16:03:37 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 550ms (Views: 536.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 16:03:46 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn+ny&commit=Search" for 127.0.0.1 at 2019-07-08 16:04:42 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn ny", "commit"=>"Search"}
