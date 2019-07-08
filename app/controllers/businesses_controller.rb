@@ -92,7 +92,10 @@ class BusinessesController < ApplicationController
     #    flash.now[:alert] = "You must enter search parameters"
        
     # else
-      if params[:page].to_i * 30 <= 1000
+      if params[:page].to_i >= 1000
+        @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30, :total_entries => 1000)
+        load_businessz
+      elsif params[:page].to_i < 1000
         @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30, :total_entries => 1000)
         load_businessz
       end
