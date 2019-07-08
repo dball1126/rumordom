@@ -161,10 +161,17 @@ end
   
   def self.search(params)
     #businesses = Business.where(category_id: params[:category].to_i)
-    
-  businesses = Business.where("name ilike ? or city ilike ? or state ilike ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
+    search = params[:search]
+    location = params[:location]
+   location = "new york ny" if location == ""
+      
+  businesses = Business.where("name ilike ? and city ilike ? and state ilike ?", "%#{search}%", "%#{location}%", "%#{location}%") if search.present?
   
-  businesses = businesses.within(4, :origin => "#{params[:location]}")
+   if businesses == nil
+    businesses = Business.where("city ilike ? or state ilike ?", "%#{location}", "%#{location}")
+   end
+    
+    businesses = businesses.within(4, :origin => "#{location}")
   
   businesses = businesses.sort_by{|x| x.distance_to("#{:location}")}
   rescue Geokit::Geocoders::GeocodeError

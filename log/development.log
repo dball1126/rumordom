@@ -6328,3 +6328,90 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 104ms (Views: 102.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:04:18 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered search/_form.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 115ms (Views: 112.1ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=&location=brooklyn&commit=Search" for 127.0.0.1 at 2019-07-08 14:04:23 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>"brooklyn", "commit"=>"Search"}
+Started GET "/businesses/search?utf8=%E2%9C%93&search=&location=brooklyn&commit=Search" for 127.0.0.1 at 2019-07-08 14:05:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>"brooklyn", "commit"=>"Search"}
+Completed 500 Internal Server Error in 10559ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `within' for nil:NilClass:
+  app/models/business.rb:167:in `search'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/cd9222a785fe1f0a/variables" for 127.0.0.1 at 2019-07-08 14:05:32 -0400
+Started GET "/" for 127.0.0.1 at 2019-07-08 14:07:54 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered search/_form.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 458ms (Views: 442.8ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=&location=&commit=Search" for 127.0.0.1 at 2019-07-08 14:08:06 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>"", "commit"=>"Search"}
+  Rendering businesses/search.html.erb within layouts/application
+  Rendered businesses/search.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 21ms
+
+
+
+ArgumentError - The @businesses variable appears to be empty. Did you forget to pass the collection object for will_paginate?:
+  app/views/businesses/search.html.erb:42:in `_app_views_businesses_search_html_erb__1647810968170836873_70103083249760'
+
+Started POST "/__better_errors/b337521d52e9d87a/variables" for 127.0.0.1 at 2019-07-08 14:08:06 -0400
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn&commit=Search" for 127.0.0.1 at 2019-07-08 14:08:20 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn", "commit"=>"Search"}
+Started GET "/businesses/search?utf8=%E2%9C%93&search=chinese&location=brooklyn&commit=Search" for 127.0.0.1 at 2019-07-08 14:09:28 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chinese", "location"=>"brooklyn", "commit"=>"Search"}
+Multi geocoding. address: brooklyn, args []
+Google geocoding. address: brooklyn, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Brooklyn%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.6781784%2C%0A+++++++++++++++%22lng%22+%3A+-73.94415789999999%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJCSF8lBZEwokRhngABHRcdoI%22%2C%0A+++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Multi geocoding. address: brooklyn, args []
+Google geocoding. address: brooklyn, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Brooklyn%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Kings+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22New+York%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22NY%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Brooklyn%2C+NY%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+40.6781784%2C%0A+++++++++++++++%22lng%22+%3A+-73.94415789999999%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.739446%2C%0A++++++++++++++++++%22lng%22+%3A+-73.83336509999999%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+40.551042%2C%0A++++++++++++++++++%22lng%22+%3A+-74.05663%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJCSF8lBZEwokRhngABHRcdoI%22%2C%0A+++++++++%22types%22+%3A+%5B+%22political%22%2C+%22sublocality%22%2C+%22sublocality_level_1%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses" WHERE (name ilike '%chinese%' or city ilike '%chinese%' or state ilike '%chinese%') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.62035045885856 AND businesses.latitude<40.736006341141426 AND businesses.longitude>-74.02040954882901 AND businesses.longitude<-73.867906251171) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.709968146793639)*COS(-1.290569017969576)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.709968146793639)*SIN(-1.290569017969576)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.709968146793639)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4))[0m
+Completed 500 Internal Server Error in 7516ms (ActiveRecord: 0.7ms)
+
+
+
+SQLite3::SQLException - near "ilike": syntax error:
+  app/models/business.rb:171:in `search'
+  app/controllers/businesses_controller.rb:96:in `search'
+
+Started POST "/__better_errors/f22c17a4cae7d06b/variables" for 127.0.0.1 at 2019-07-08 14:09:35 -0400
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE (name ilike '%chinese%' or city ilike '%chinese%' or state ilike '%chinese%') AND (businesses.latitude IS NOT NULL AND businesses.longitude IS NOT NULL) AND (businesses.latitude>40.62035045885856 AND businesses.latitude<40.736006341141426 AND businesses.longitude>-74.02040954882901 AND businesses.longitude<-73.867906251171) AND ((
+          (CASE WHEN businesses.latitude IS NULL OR businesses.longitude IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.709968146793639)*COS(-1.290569017969576)*COS(RADIANS(businesses.latitude))*COS(RADIANS(businesses.longitude))+
+          COS(0.709968146793639)*SIN(-1.290569017969576)*COS(RADIANS(businesses.latitude))*SIN(RADIANS(businesses.longitude))+
+          SIN(0.709968146793639)*SIN(RADIANS(businesses.latitude))))*3963.1899999999996)
+          END)
+          <= 4)) LIMIT ?[0m  [["LIMIT", 11]]
