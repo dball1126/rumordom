@@ -7357,3 +7357,29 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 116ms (Views: 112.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-07-08 22:30:26 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered search/_form.html.erb (0.8ms)
+Completed 200 OK in 103ms (Views: 100.8ms)
+
+
+Started GET "/businesses/search?utf8=%E2%9C%93&search=brooklyn&location=new+york&commit=Search" for 127.0.0.1 at 2019-07-08 22:31:08 -0400
+Processing by BusinessesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"brooklyn", "location"=>"new york", "commit"=>"Search"}
+  [1m[36mBusiness Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "businesses" WHERE ((LOWER(city) LIKE '%new%' OR LOWER(state) LIKE '%new%' OR LOWER(city) LIKE '%york%' OR LOWER(state) LIKE '%york%')) AND ((LOWER(name) iLIKE '%brooklyn%')) LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.1ms)
+
+
+
+SQLite3::SQLException - near "iLIKE": syntax error:
+  app/models/business.rb:198:in `search'
+  app/controllers/businesses_controller.rb:101:in `search'
+
+Started POST "/__better_errors/639d0ed95ae48c66/variables" for 127.0.0.1 at 2019-07-08 22:31:08 -0400
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE ((LOWER(city) LIKE '%new%' OR LOWER(state) LIKE '%new%' OR LOWER(city) LIKE '%york%' OR LOWER(state) LIKE '%york%')) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE ((LOWER(city) LIKE '%new%' OR LOWER(state) LIKE '%new%' OR LOWER(city) LIKE '%york%' OR LOWER(state) LIKE '%york%')) AND ((LOWER(name) iLIKE '%brooklyn%')) LIMIT ?[0m  [["LIMIT", 11]]
