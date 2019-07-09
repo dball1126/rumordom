@@ -93,12 +93,12 @@ class BusinessesController < ApplicationController
        
     # else
       if params[:page].to_i * 30 >= 1000
-        @businesses = Business.reorder('name DESC').limit(1000).search(params).paginate(:page => params[:page], :per_page => 30, :total_entries => 1000, :order => 'name DESC')
+        @businesses = Business.order(:name).limit(1000).search(params).paginate(:page => params[:page], :per_page => 30, :total_entries => 1000)
         
         load_businessz
       elsif params[:page].to_i * 30 < 1000
         
-        @businesses = Business.reorder('name DESC').limit(1000).search(params).paginate(:page => params[:page], :per_page => 30, :order => 'name DESC')
+        @businesses = Business.order(:name).limit(1000).search(params).paginate(:page => params[:page], :per_page => 30)
         load_businessz
       end
     #Business.within(

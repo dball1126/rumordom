@@ -180,7 +180,7 @@ end
             location1Businesses = Business.where('(' + location1String + ')')
 
             queryString = query.split(' ').map do |string|
-                string = "LOWER(name) LIKE '%#{string.downcase}%'"
+                string = "LOWER(name) iLIKE '%#{string.downcase}%'"
             end.join(" OR ")
             businesses = location1Businesses.where('(' + queryString + ')').order(:name)
             
