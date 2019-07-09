@@ -182,7 +182,7 @@ end
             queryString = query.split(' ').map do |string|
                 string = "LOWER(name) iLIKE '%#{string.downcase}%'"
             end.join(" OR ")
-            businesses = location1Businesses.where('(' + queryString + ')').order(:name)
+            businesses = location1Businesses.where('(' + queryString + ')')
             
 
           elsif query == ""
@@ -192,6 +192,7 @@ end
             end.join(" OR ")
             
             businesses = Business.where('(' + location1String + ')')
+            
           end
 
              if businesses.empty?
