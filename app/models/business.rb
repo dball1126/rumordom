@@ -200,8 +200,9 @@ end
                 
              else
               begin
-              businesses = businesses.within(1, :origin => "#{location1}")
-              businesses = businesses.sort_by{|x| x.distance_to("#{:location1}")}
+              businesses = businesses.within(4, :origin => "#{location1}")
+              # This is causing multiple geocoding points and actually messing up the order i want them to render in.
+              # businesses = businesses.sort_by{|x| x.distance_to("#{:location1}")}
               businesses
             rescue Geokit::Geocoders::GeocodeError
             print "Search results must be more specific"
