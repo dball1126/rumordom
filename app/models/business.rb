@@ -182,7 +182,7 @@ end
             queryString = query.split(' ').map do |string|
                 string = "LOWER(name) iLIKE '%#{string.downcase}%'"
             end.join(" OR ")
-            businesses = location1Businesses.where('(' + queryString + ')')
+            businesses = location1Businesses.order(:name).limit(1000).where('(' + queryString + ')')
             
 
           elsif query == ""
@@ -191,7 +191,7 @@ end
                 string = "LOWER(city) LIKE '%#{"new york"}%'" + (" AND ") + ("zipcode LIKE '%#{"10018"}%'")
             end.join(" OR ")
             
-            businesses = Business.where('(' + location1String + ')')
+            businesses = Business.order(:name).limit(1000).where('(' + location1String + ')')
             
           end
 
