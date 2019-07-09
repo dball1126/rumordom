@@ -7383,3 +7383,26 @@ SQLite3::SQLException - near "iLIKE": syntax error:
 Started POST "/__better_errors/639d0ed95ae48c66/variables" for 127.0.0.1 at 2019-07-08 22:31:08 -0400
   [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE ((LOWER(city) LIKE '%new%' OR LOWER(state) LIKE '%new%' OR LOWER(city) LIKE '%york%' OR LOWER(state) LIKE '%york%')) LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE ((LOWER(city) LIKE '%new%' OR LOWER(state) LIKE '%new%' OR LOWER(city) LIKE '%york%' OR LOWER(state) LIKE '%york%')) AND ((LOWER(name) iLIKE '%brooklyn%')) LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-07-08 23:39:31 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered search/_form.html.erb (0.7ms)
+Completed 200 OK in 474ms (Views: 460.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-08 23:39:32 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered search/_form.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
