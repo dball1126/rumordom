@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
       if @user.activated?
         log_in @user
         params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
+        debugger
         redirect_back_or root_url
       else
         message = "Account not activated."

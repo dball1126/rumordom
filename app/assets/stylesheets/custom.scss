@@ -8,7 +8,13 @@
 }
 
 body {
-  background-color: white;
+  // background-color: white;
+  // background-image:url("http://www.zingerbug.com/Backgrounds/background_images/small_light_green_bricks_seamless_pattern.gif");
+  background-image:url("https://i.imgur.com/hlhd50e.jpg");
+  // background-image:image-url("vector.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 h1 { 
@@ -39,7 +45,7 @@ header {
 }
 
 header.navbar {
-  background-color: White;
+  // background-color: White;
   height: 40px;
 }
 
@@ -752,6 +758,10 @@ span.picture {
 .main_message {
   text-align: center;
   font-size: 4em;
+}
+
+#main-two-buttons{
+  margin-top: 10px;
 }
 
 
