@@ -20,12 +20,14 @@
   </aside>
   <div class="col-md-8">
     <h3><%= @title %></h3>
-    <% if @users.any? %>
       <ul class="users follow">
-        
+    <% if @users.any? %>
         <%= render @users %>  
+    <% end %>
+    <% if @businesses.any? %>
+        <%= render @businesses%>
       </ul>
       <%= will_paginate %>
-    <% end %>
+
   </div>
 </div>
