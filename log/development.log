@@ -10970,3 +10970,7 @@ Completed 200 OK in 105ms (Views: 103.2ms | ActiveRecord: 0.0ms)
 
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses"[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses"[0m
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" ORDER BY "businesses"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."business_id" = ? ORDER BY "experiences"."created_at" DESC LIMIT ?[0m  [["business_id", 1], ["LIMIT", 11]]
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."business_id" = ? ORDER BY "experiences"."created_at" DESC LIMIT ?[0m  [["business_id", 1], ["LIMIT", 11]]
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."business_id" = ? ORDER BY "experiences"."created_at" ASC LIMIT ?[0m  [["business_id", 1], ["LIMIT", 1]]
