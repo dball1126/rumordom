@@ -753,9 +753,37 @@ span.picture {
   text-align: center;
   font-size: 4em;
 }
+
+
 @media (min-width: 1200px) {
   .container{
   width: 970px;
+}
+.greeting-message{
+  width: 800px;
+}
+}
+@media (min-width: 1000px) {
+  .container{
+  width: 970px;
+}
+.greeting-message{
+  width: 800px;
+}
+#main-footer-bar{
+  margin-left: -15px;
+}
+}
+
+@media (min-width: 800px){
+  .container{
+    width: 970px;
+  }
+  .greeting-message{
+  width: 600px;
+}
+#main-footer-bar{
+  margin-left: -15px;
 }
 }
 
@@ -780,6 +808,7 @@ span.picture {
       height: 30px;
       margin-right: 0px;
       background-color: #8c1aff;
+      
       nav {
         
         ul {
@@ -872,6 +901,9 @@ span.picture {
       padding-top: 35px;
     }
   }
+  #main-footer-bar{
+  margin-left: -15px;
+}
 }
 
 @media only screen and (max-width: 600px) {
