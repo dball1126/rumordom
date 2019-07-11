@@ -10833,3 +10833,138 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 86ms (Views: 84.8ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/login" for 127.0.0.1 at 2019-07-11 17:18:46 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aVwJu/H1BDa87Wi6wTk26BAaYYCVxeEk2Ep1oHrixuYADHifOLL1VI71DAUwiHqjpB5rJIcX6nCovydLn7bdnw==", "session"=>{"email"=>"david@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "david@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-11 17:18:46 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered shared/_user_info.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (3.8ms)
+  Rendered users/_follow_form.html.erb (0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE (business_id IN (SELECT followedz_id FROM relationshipzs
+                     WHERE  followerz_id = 3)
+                     OR business_id = 3)[0m
+  Rendered shared/_feed.html.erb (1.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered search/_form.html.erb (0.9ms)
+Completed 200 OK in 106ms (Views: 100.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user_feed" for 127.0.0.1 at 2019-07-11 17:18:47 -0400
+Processing by StaticPagesController#user_feed as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering static_pages/user_feed.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered shared/_user_info.html.erb (1.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (4.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 3)
+                     OR user_id = 3)[0m
+  Rendered shared/_feedz.html.erb (1.1ms)
+  Rendered static_pages/user_feed.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered search/_form.html.erb (0.5ms)
+Completed 200 OK in 107ms (Views: 100.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-11 17:18:48 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered shared/_user_info.html.erb (2.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (5.4ms)
+  Rendered users/_follow_form.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE (business_id IN (SELECT followedz_id FROM relationshipzs
+                     WHERE  followerz_id = 3)
+                     OR business_id = 3)[0m
+  Rendered shared/_feed.html.erb (1.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered search/_form.html.erb (0.7ms)
+Completed 200 OK in 121ms (Views: 114.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user_feed" for 127.0.0.1 at 2019-07-11 17:37:15 -0400
+Processing by StaticPagesController#user_feed as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering static_pages/user_feed.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered shared/_user_info.html.erb (1.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (4.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 3)
+                     OR user_id = 3)[0m
+  Rendered shared/_feedz.html.erb (1.0ms)
+  Rendered static_pages/user_feed.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered search/_form.html.erb (0.9ms)
+Completed 200 OK in 114ms (Views: 108.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-11 17:37:16 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered shared/_user_info.html.erb (1.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (3.9ms)
+  Rendered users/_follow_form.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE (business_id IN (SELECT followedz_id FROM relationshipzs
+                     WHERE  followerz_id = 3)
+                     OR business_id = 3)[0m
+  Rendered shared/_feed.html.erb (0.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered search/_form.html.erb (1.8ms)
+Completed 200 OK in 159ms (Views: 153.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-07-11 17:37:19 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YJZvI+wCbzY6hzR6hsvXhpigTKWnBY6SIThqZ/LKiiUJxh4HJUWeVAifUMV3epvNLKRGAbXXhcZRzTiMF56RXA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-11 17:37:19 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered search/_form.html.erb (0.8ms)
+Completed 200 OK in 105ms (Views: 103.2ms | ActiveRecord: 0.0ms)
+
+
