@@ -53,6 +53,9 @@ header.navbar {
   text-align: center;
 }
 
+.dropdown-toggle{
+  background-color: transparent;
+}
 
 header ul {
 color: #3cff6d;
@@ -81,6 +84,16 @@ margin-left: -60px;
 
 .dropdown:hover .dropdown-menu {
   display: block;
+  
+}
+
+#top-rumordom-link{
+  background-color: #8c1aff;
+}
+
+#rumordom-footer-link{
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .dropdown-menu .divider {
@@ -102,10 +115,11 @@ margin-left: -60px;
       font-weight: bold;
       color: white;
       &:hover {
-        color: red;
+        background-color: transparent;
+        color: #c7ff0a;
         &:dropdown {
           color: blue;
-          background-color: Red;
+          background-color: #c7ff0a;
         }
       }
     }
@@ -134,7 +148,8 @@ margin-left: -60px;
   font-weight: bold;
   float: left;
   &:hover {
-    color: red;
+    background-color: transparent;
+    color: #c7ff0a;
     text-decoration: none;
   }
 }
@@ -142,15 +157,17 @@ margin-left: -60px;
  #links  {
   color: #ffffff;
   font-weight: bold;
+  text-decoration: none;
   &:hover {
-    color: Red;
+    background-color: transparent;
+    color: #c7ff0a;
     font-weight: bold;
   }
 }
 
  #links6 {
    
-   color: Red;
+   color: #c7ff0a;
   font-weight: bold;
   &:hover {
     color: White;
@@ -169,7 +186,8 @@ margin-left: -60px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: red;
+    background-color: transparent;
+    color: #c7ff0a;
     text-decoration: none;
   }
 }
@@ -179,13 +197,14 @@ margin-left: -60px;
   margin-left: -9px;
   margin-right: 10px;
   font-size: 1.7em;
-  color: Red;
+  color: #c7ff0a;
   letter-spacing: -1px;
   padding-top: 1px;
   font-weight: bold;
   padding-left: 1px;
   &:hover {
-    color: red;
+    background-color: transparent;
+    color: #c7ff0a;
     text-decoration: none;
   }
 }
@@ -226,7 +245,8 @@ footer {
   a {
     color: white;
     &:hover {
-      color: red;
+      background-color: transparent;
+      color: #c7ff0a;
     }
   }
   small {
@@ -1083,3 +1103,4 @@ span.picture {
   }
 
 }
+

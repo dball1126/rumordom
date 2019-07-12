@@ -2,10 +2,10 @@
   <div class="container">
     <nav>
       <ul class="nav navbar-nav myNavbarz">
-        <li><%= link_to "Rumordom", root_path %></li>
+        <li><%= link_to "Rumordom", root_path, id: "top-rumordom-link" %></li>
       <% if logged_in? %>
       <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color: transparent">
               Menu<span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
@@ -14,7 +14,7 @@
               </ul>
               </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color: transparent">
               Account<span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
@@ -28,8 +28,7 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Log in", login_path %></li>
-          <li><%= link_to "Demo login", demo_login_path %></li>
+          <li><%= link_to "Login", login_path, id: "top-rumordom-link" %></li>
         <% end %>
       </ul>
     </nav>
