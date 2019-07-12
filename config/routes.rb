@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'password_resets/new'
 
   get 'password_resets/edit'
-
+  get '/demo_login', to: 'static_pages#demo_login'
   get 'sessions/new'
   get  '/search',  to: 'static_pages#search'
   get  '/help',    to: 'static_pages#help'

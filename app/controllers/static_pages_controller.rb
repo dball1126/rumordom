@@ -16,6 +16,12 @@ class StaticPagesController < ApplicationController
   
   def about
   end
+
+  def demo_login
+    @user = User.find_by(id: 6)
+    log_in(@user)
+    redirect_to root_url
+  end
   
   def user_feed
     if logged_in?
