@@ -75,7 +75,7 @@ class BusinessesController < ApplicationController
   end
 
   def followerzs
-    @title = "Followerzs"
+    @title = "Followers"
     @business = Business.find(params[:id])
     # @businesses = @business.followerzs.paginate(page: params[:page])
     @users = @business.followerzs.paginate(page: params[:page])
