@@ -79,7 +79,7 @@ class BusinessesController < ApplicationController
     @business = Business.find(params[:id])
     # @businesses = @business.followerzs.paginate(page: params[:page])
     @users = @business.followerzs.paginate(page: params[:page])
-    debugger
+    
     render 'show_followers'
   end
 
