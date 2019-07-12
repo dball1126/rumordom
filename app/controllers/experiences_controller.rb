@@ -21,10 +21,12 @@ class ExperiencesController < ApplicationController
     if @experience.save
       flash[:success] = "Experience created!"
     redirect_to @business
-    else 
+    else
+      flash.now[:errors] = @experience.errors.full_messages[0]
       @feed_items = []
       @feedz_items = []
-    render 'static_pages/home'
+      render 'new'
+    # render 'static_pages/home'
     end
   end
   
