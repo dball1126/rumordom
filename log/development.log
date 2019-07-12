@@ -10976,3 +10976,4 @@ Completed 200 OK in 105ms (Views: 103.2ms | ActiveRecord: 0.0ms)
   [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."business_id" = ? ORDER BY "experiences"."created_at" ASC LIMIT ?[0m  [["business_id", 1], ["LIMIT", 1]]
   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]

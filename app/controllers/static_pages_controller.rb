@@ -18,7 +18,7 @@ class StaticPagesController < ApplicationController
   end
 
   def demo_login
-    @user = User.find_by(id: 6)
+    @user = User.find_by(id: 3)
     log_in(@user)
     redirect_to root_url
   end

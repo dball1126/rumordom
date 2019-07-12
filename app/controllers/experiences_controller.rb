@@ -51,6 +51,6 @@ class ExperiencesController < ApplicationController
   
   
   def set_business
-    @business = Business.find(params[:business_id])
+    @business = Business.find_by(params[:business_id])
   end
 end
