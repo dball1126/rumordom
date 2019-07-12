@@ -7,8 +7,9 @@ class Experience < ActiveRecord::Base
     mount_uploader :picture, PictureUploader
     validates :user_id, presence: true
     validates :comment, presence: true, length: { maximum: 130 }
+    # validates :picture, :allow_nil => true
     validate  :picture_size
-    private
+    # private
 
     # Validates the size of an uploaded picture.
     def picture_size
