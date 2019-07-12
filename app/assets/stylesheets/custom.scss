@@ -83,6 +83,10 @@ margin-left: -60px;
   display: block;
 }
 
+.dropdown-menu .divider {
+  background-color: transparent;
+}
+
 .myNavbar   {
   width: 100%;
     color:#222;
@@ -111,12 +115,12 @@ margin-left: -60px;
    
    li {
   
-     color: White;
+     color: #8c1aff;
      border-radius: 4px;
      
    }
    .dropdown-menu {
-     background-color: White;
+     background-color: #8c1aff;
    }
  }
  
@@ -136,7 +140,7 @@ margin-left: -60px;
 }
  
  #links  {
-  color: Black;
+  color: #ffffff;
   font-weight: bold;
   &:hover {
     color: Red;
@@ -766,6 +770,8 @@ span.picture {
 .main_message {
   text-align: center;
   font-size: 4em;
+  font-weight: 800px;
+  
 }
 
 #main-two-buttons{
