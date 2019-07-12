@@ -6,7 +6,7 @@ class Experience < ActiveRecord::Base
     default_scope -> { order(created_at: :desc) }
     mount_uploader :picture, PictureUploader
     validates :user_id, presence: true
-    validates :comment, presence: true, length: { maximum: 130 }
+    validates :comment, presence: true, length: { maximum: 300 }
     # validates :picture, :allow_nil => true
     validate  :picture_size
     # private

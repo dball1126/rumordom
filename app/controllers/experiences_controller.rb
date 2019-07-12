@@ -11,10 +11,13 @@ class ExperiencesController < ApplicationController
   end
   
   def create
+    debugger
     @experience = current_user.experiences.build(experience_params)
+    debugger
     @experience.business = @business
     #@host = Business.find_by(@experience.business_id)
     #@experience.save
+    debugger
     if @experience.save
       flash[:success] = "Experience created!"
     redirect_to @business
