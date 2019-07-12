@@ -1,0 +1,40 @@
+<% provide(:title, @title) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="business_info">
+      <h1>
+        <%= @business.name %>
+      </h1>
+            <%= @business.address1 %></br>
+            <%= @business.city %>,
+            <%= @business.state %>
+            <%= @business.zipcode %></br>
+            Phone: <%= @business.phone %></br>
+Category1: <%= Category.find(@business.category1_id).name %></br>
+Category2: <%= Category.find(@business.category2_id).name %></br>
+Category3: <%= Category.find(@business.category3_id).name %></br>
+    </section>
+    <section class="statsz">
+      <%= render 'shared/statsz' %>
+      <% if @users.any? %>
+        <div class="user_avatars">
+          <% @users.each do |user| %>
+            <%= link_to gravatar_for(user, size: 30), user %>
+          <% end %>
+        </div>
+      <% end %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <h3><%= @title %></h3>
+      <ul class="users follow">
+    <% if @users.any? %>
+        <%= render @users %>  
+    <% end %>
+   
+    
+      </ul>
+     
+
+  </div>
+</div>

@@ -77,8 +77,10 @@ class BusinessesController < ApplicationController
   def followerzs
     @title = "Followerzs"
     @business = Business.find(params[:id])
-    @businesses = @business.followerzs.paginate(page: params[:page])
-    render 'show_followz'
+    # @businesses = @business.followerzs.paginate(page: params[:page])
+    @users = @business.followerzs.paginate(page: params[:page])
+    debugger
+    render 'show_followers'
   end
 
   def search
