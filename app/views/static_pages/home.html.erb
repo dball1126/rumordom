@@ -18,15 +18,17 @@
     </div>
   </div>
 <% else %>
+<div class="main-page-wrapper">
 <div class="main_message">
 <font color=#8c1aff style="font-weight: 800" background-color: "purple">Rumordom</font>
   </div>
   <span><%= number_with_delimiter(Business.count, :delimiter => ',') %> total businesses!</span>
   <p class="greeting-message">Welcome to Rumordom. This is a website where you can write about an experience you've had with a business. <strong>Every Experience Matters</strong> and someone should know about it. Click <%= link_to "HERE", about_path %> for more information about <font color=#8c1aff size="3em" font-weight: "bold">Rumordom</font>.</p>
-  <div>
+  <div class="main-buttons-box">
   <div id="main-two-buttons"><%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %></div>
   <div id="main-two-buttons"><%= link_to "Demo Login", demo_login_path, class: "btn btn-lg btn-primary" %></div>
   <div id="main-two-buttons"><%= link_to "Write about an Experience!", new_business_path, class: "btn btn-lg btn-primary" %></div>
+  </div>
   </div>
   <%= render 'layouts/footer' %>
   <% end %>
