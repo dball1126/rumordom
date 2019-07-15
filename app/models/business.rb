@@ -162,7 +162,7 @@ end
   def self.search(params)
     #businesses = Business.where(category_id: params[:category].to_i)
     
-    query = params[:search]
+    query = params[:search].gsub("'", "''")
     location1 = params[:location]
     
    location1 = "brooklyn" if location1 == ""
@@ -181,7 +181,8 @@ end
 
             queryString = query.split(' ').map do |string|
                 string = "LOWER(name) iLIKE '%#{string.downcase}%'"
-            end.join(" OR ")
+            end.join(" AND ")
+            #changed from or to and to get a better match for search results
             businesses = location1Businesses.order(:name).limit(1000).where('(' + queryString + ')')
             
 
