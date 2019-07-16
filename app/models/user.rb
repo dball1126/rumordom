@@ -25,9 +25,6 @@ class User < ApplicationRecord
                                   dependent:   :destroy
   has_many :followingz, through: :active_relationshipzs, source: :followedz
   
-  
-  
-  
   before_save   :downcase_email
   before_create :create_activation_digest
   validates :name,  presence: true, length: { maximum: 50 }, uniqueness: { case_sensitive: false }

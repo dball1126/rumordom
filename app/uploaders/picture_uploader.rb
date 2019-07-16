@@ -3,8 +3,14 @@ class PictureUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
   include CarrierWave::MiniMagick
-  process resize_to_limit: [150, 150]
-
+  # process resize_to_limit: [150, 150]
+  def quality(percentage)
+      manipulate! do |img|
+        img.write(current_path){ self.quality(percentage) }
+        img = yield(img) if block_given?
+        img
+      end
+    end
   # Choose what kind of storage to use for this uploader:
   
   if Rails.env.production?
