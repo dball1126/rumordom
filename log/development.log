@@ -21341,3 +21341,248 @@ Processing by BusinessesController#show as HTML
 Completed 200 OK in 164ms (Views: 158.4ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/users/3" for 127.0.0.1 at 2019-07-16 00:50:54 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/_follow_form.html.erb (0.5ms)
+  [1m[36mExperience Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "experiences" WHERE "experiences"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."user_id" = ? ORDER BY "experiences"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of experiences/_experience.html.erb [13 times] (25.0ms)
+  Rendered users/show.html.erb within layouts/application (42.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered search/_form.html.erb (1.2ms)
+Completed 200 OK in 144ms (Views: 137.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2019-07-16 00:51:39 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/_follow_form.html.erb (0.5ms)
+  [1m[36mExperience Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "experiences" WHERE "experiences"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."user_id" = ? ORDER BY "experiences"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of experiences/_experience.html.erb [13 times] (29.0ms)
+  Rendered users/show.html.erb within layouts/application (45.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered search/_form.html.erb (0.9ms)
+Completed 200 OK in 155ms (Views: 148.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2019-07-16 00:53:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/_follow_form.html.erb (0.4ms)
+  [1m[36mExperience Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "experiences" WHERE "experiences"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."user_id" = ? ORDER BY "experiences"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of experiences/_experience.html.erb [13 times] (23.1ms)
+  Rendered users/show.html.erb within layouts/application (38.5ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered search/_form.html.erb (0.7ms)
+Completed 200 OK in 2917ms (Views: 2911.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2019-07-16 00:54:44 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/_follow_form.html.erb (0.4ms)
+  [1m[36mExperience Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "experiences" WHERE "experiences"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."user_id" = ? ORDER BY "experiences"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of experiences/_experience.html.erb [13 times] (27.7ms)
+  Rendered users/show.html.erb within layouts/application (43.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered search/_form.html.erb (1.2ms)
+Completed 200 OK in 2939ms (Views: 2932.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2019-07-16 00:59:33 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "businesses" INNER JOIN "relationshipzs" ON "businesses"."id" = "relationshipzs"."followedz_id" WHERE "relationshipzs"."followerz_id" = ?[0m  [["followerz_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  Rendered shared/_stats.html.erb (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/_follow_form.html.erb (0.5ms)
+  [1m[36mExperience Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "experiences" WHERE "experiences"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "experiences" WHERE "experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."user_id" = ? ORDER BY "experiences"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Business Load (0.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of experiences/_experience.html.erb [13 times] (23.1ms)
+  Rendered users/show.html.erb within layouts/application (38.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered search/_form.html.erb (0.6ms)
+Completed 200 OK in 2804ms (Views: 2798.2ms | ActiveRecord: 1.8ms)
+
+
