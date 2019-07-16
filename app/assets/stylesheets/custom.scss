@@ -681,6 +681,9 @@ span.picture {
   padding: 0;
 }
 
+#experiences-images img{
+  width: 150px;
+}
 
 /* Experiences */
 
@@ -702,7 +705,6 @@ span.picture {
     margin-left: 60px;
     img {
       display: block;
-      
       padding: 5px 0;
     }
   }

@@ -1,8 +1,7 @@
 <% if @feed_items.any? %>
-  <ol class="experiences">
+  <ol class="experiences" >
     
     <%= render @feed_items %>
-    
   </ol>
   <%= will_paginate @feed_items %>
 

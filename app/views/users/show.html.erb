@@ -13,11 +13,11 @@
     </section>
     <%= link_to "Add A Business", businesses_new_path, class: "btn btn-lg btn-primary" %>
   </aside>
-  <div class="col-md-8">
+  <div class="col-md-8" >
     <%= render 'follow_form' if logged_in? %>
       <% if @user.experiences.any? %>
       <h3>Experiences (<%= @user.experiences.count %>)</h3>
-      <ol class="experiences">
+      <ol class="experiences" >
         <%= render @experiences %>
       </ol>
       <%= will_paginate @experiences %>
