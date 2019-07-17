@@ -821,6 +821,7 @@ span.picture {
 .greeting-message{
   width: 800px;
 }
+
 }
 @media (min-width: 1000px) {
   .container{
@@ -831,6 +832,9 @@ span.picture {
 }
 #main-footer-bar{
   margin-left: -15px;
+}
+.business_info{
+  width: 300px;
 }
 }
 
@@ -844,6 +848,10 @@ span.picture {
 #main-footer-bar{
   margin-left: -15px;
 }
+.business_info{
+  width: 300px;
+}
+
 }
 
 @media only screen and (max-width: 800px) { 
@@ -939,7 +947,7 @@ span.picture {
 }
 
   .col-md-4 {
-    display: none;
+    
   }
   
   .col-md-8 {
@@ -967,6 +975,12 @@ span.picture {
   #main-footer-bar{
   margin-left: -15px;
 }
+
+.business_info{
+  width: 300px;
+}
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -1031,7 +1045,7 @@ span.picture {
 }
 
   .col-md-4 {
-    display: none;
+    
   }
   
   .col-md-8 {
@@ -1107,7 +1121,7 @@ span.picture {
 }
 
   .col-md-4 {
-    display: none;
+    
   }
   
   .col-md-8 {
