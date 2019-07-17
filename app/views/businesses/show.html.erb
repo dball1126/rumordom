@@ -24,6 +24,7 @@ Category3: <%= Category.find(@business.category3_id).name %></br>
         <% if arr.include?(@business.id) %>
         <h4>Pictures</h4>
         <div id="experiences-images">
+        <div id="experiences-images">
          </br>
             <% y.each do |img| %>
             <% if img.picture.present? %>
