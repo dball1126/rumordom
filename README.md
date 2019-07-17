@@ -19,11 +19,13 @@ Tested in multiple browsers and mobile devices.
 
 # Feature: Geocoder with Google Maps
 ![alt text](https://i.imgur.com/iXxeg2W.png "maps")
+
 Google Maps
 
 Businesses plotted on map after user enters search parameters.
 
 ![alt text](https://i.imgur.com/CnaxtTB.png "geocoder")
+
 Geocoder Gem
 
 Businesses full address is captured and inserted into the geocode_address and the latitude and longitutde is entered automatically into the database when it's first created.
