@@ -14,10 +14,10 @@ Users can search for businesses depending on the name and location
 # Technologies Used
 Ruby, Rails, Sass, CSS3, Google Maps, AWS.
 
-#Compatibility
+# Compatibility
 Tested in multiple browsers and mobile devices.
 
-#Feature: Geocoder with Google Maps
+# Feature: Geocoder with Google Maps
 ![alt text](https://i.imgur.com/iXxeg2W.png "maps")
 Google Maps
 
@@ -28,20 +28,17 @@ Geocoder Gem
 
 Businesses full address is captured and inserted into the geocode_address and the latitude and longitutde is entered automatically into the database when it's first created.
 
-#Feature: Media Queries
+# Feature: Media Queries
 ![alt text](https://i.imgur.com/TmZUyHl.png "query")
 Some of the Media queries.
 
 Media queries are used to change the size and width of SCSS pages so all features can be useable on mobile devices.
 
 # Other Features
-Media Queries for tablets, phones, laptops, and of course desktops.
 
 Activation link via email.
 
 Remember me "checkbox."
-
-Add Businesses and they're geocoded using the geocode gem automatically.
 
 Hidden feature....import businesses via CSV File.
 
