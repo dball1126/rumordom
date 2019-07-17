@@ -17,7 +17,7 @@ Category3: <%= Category.find(@business.category3_id).name %></br>
     </section>
       <section class="statsz">
       <%= render 'shared/statsz' %>
-      <div style='width: 300px;' >  
+      <div style='width: 300px;' class="business-show-all-pictures">  
 <% y = @business.experiences.all.to_a %>
          <% arr = [] %>
          <% y.each {|z| arr << z.business_id } %>

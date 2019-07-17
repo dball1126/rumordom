@@ -981,6 +981,8 @@ span.picture {
 }
 
 
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -1054,6 +1056,10 @@ span.picture {
       font-size: 1.57em;
     }
   }
+
+  .business-show-all-pictures{
+  display: none;
+}
 
 }
 
