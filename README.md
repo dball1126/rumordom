@@ -17,6 +17,23 @@ Ruby, Rails, Sass, CSS3, Google Maps, AWS.
 #Compatibility
 Tested in multiple browsers and mobile devices.
 
+#Feature: Geocoder with Google Maps
+![alt text](https://i.imgur.com/iXxeg2W.png "maps")
+Google Maps
+
+Businesses plotted on map after user enters search parameters.
+
+![alt text](https://i.imgur.com/CnaxtTB.png "geocoder")
+Geocoder Gem
+
+Businesses full address is captured and inserted into the geocode_address and the latitude and longitutde is entered automatically into the database when it's first created.
+
+#Feature: Media Queries
+![alt text](https://i.imgur.com/TmZUyHl.png "query")
+Some of the Media queries.
+
+Media queries are used to change the size and width of SCSS pages so all features can be useable on mobile devices.
+
 # Other Features
 Media Queries for tablets, phones, laptops, and of course desktops.
 
