@@ -155,7 +155,7 @@ class User < ApplicationRecord
   end
   
   def self.search(params)
-  users = User.where("name ilike ?", "%#{params[:search]}%") if params[:search].present?
+  users = User.where("name ilike ?", "%#{params[:search].gsub("'", "''")}%") if params[:search].present?
   users
   end
   
