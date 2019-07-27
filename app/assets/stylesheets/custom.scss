@@ -15,6 +15,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+  background-repeat: no-repeat;
   
 }
 
@@ -354,7 +355,7 @@ aside {
     margin-top: 20px;
     &:first-child {
       border: 0;
-      paddding-top: 0;
+      padding-top: 0;
     }
     span {
       display: block;
@@ -857,8 +858,14 @@ span.picture {
 @media only screen and (max-width: 800px) { 
     body {
       width: 100%;
-        background-color: white;
-        overflow-x: hidden !important;
+      background-image:url("https://i.imgur.com/hlhd50e.jpg");
+  // background-image:image-url("vector.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+        // background-color: white;
+        // overflow-x: hidden !important;
     }
     header {
       width: 100%;
@@ -988,7 +995,13 @@ span.picture {
 @media only screen and (max-width: 600px) {
     body {
       width: 100%;
-        background-color: white;
+        // background-color: white;
+        background-image:url("https://i.imgur.com/hlhd50e.jpg");
+  // background-image:image-url("vector.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
     }
     header {
       width: 600px;
@@ -1075,7 +1088,13 @@ span.picture {
 
   body {
       width: 100%;
-        background-color: white;
+        // background-color: white;
+        background-image:url("https://i.imgur.com/hlhd50e.jpg");
+  // background-image:image-url("vector.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
     }
     header {
       width: 480px;
