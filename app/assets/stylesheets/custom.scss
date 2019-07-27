@@ -7,17 +7,34 @@
   box-sizing:         border-box;
 }
 
-body {
-  // background-color: white;
-  // background-image:url("http://www.zingerbug.com/Backgrounds/background_images/small_light_green_bricks_seamless_pattern.gif");
-  background-image:url("https://i.imgur.com/hlhd50e.jpg");
-  // background-image:image-url("vector.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
+// body {
+//   // background-color: white;
+//   // background-image:url("http://www.zingerbug.com/Backgrounds/background_images/small_light_green_bricks_seamless_pattern.gif");
+//   background-image:url("https://i.imgur.com/hlhd50e.jpg");
+//   // background-image:image-url("vector.jpg");
+//   background-size: cover;
+//   background-attachment: fixed;
+//   background-position: center center;
+//   background-repeat: no-repeat;
   
+// }
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-image:url("https://i.imgur.com/hlhd50e.jpg");
+background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 .main-page-wrapper{
   margin: 0 auto;
@@ -858,12 +875,11 @@ span.picture {
 @media only screen and (max-width: 800px) { 
     body {
       width: 100%;
-      background-image:url("https://i.imgur.com/hlhd50e.jpg");
+      
   // background-image:image-url("vector.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
+ 
+  background-attachment: initial;
+  
         // background-color: white;
         // overflow-x: hidden !important;
     }
@@ -996,12 +1012,11 @@ span.picture {
     body {
       width: 100%;
         // background-color: white;
-        background-image:url("https://i.imgur.com/hlhd50e.jpg");
+        
   // background-image:image-url("vector.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
+  
+  background-attachment: initial;
+ 
     }
     header {
       width: 600px;
@@ -1089,12 +1104,11 @@ span.picture {
   body {
       width: 100%;
         // background-color: white;
-        background-image:url("https://i.imgur.com/hlhd50e.jpg");
+       
   // background-image:image-url("vector.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
+  
+  background-attachment: initial;
+ 
     }
     header {
       width: 480px;
