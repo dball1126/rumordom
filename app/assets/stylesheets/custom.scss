@@ -830,6 +830,12 @@ span.picture {
   margin-top: 10px;
 }
 
+#map{
+  width: 500px;
+  height: 500px;
+  float: right;
+}
+
 
 
 @media (min-width: 1200px) {
@@ -1095,6 +1101,9 @@ span.picture {
 
 #map {
   margin-top: -30px;
+  width: 300px;
+  height: 200px;
+  float: none;
 }
 
 }
