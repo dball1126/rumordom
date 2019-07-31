@@ -830,6 +830,10 @@ span.picture {
   margin-top: 10px;
 }
 
+.mapx {
+  padding-right: 100px;
+}
+
 #map{
   width: 500px;
   height: 500px;
@@ -860,6 +864,13 @@ span.picture {
 .business_info{
   width: 300px;
 }
+.mapx{
+  padding-right: 100px;
+}
+#map {
+  width: 400px;
+  height: 400px;
+}
 }
 
 @media (min-width: 800px){
@@ -875,7 +886,13 @@ span.picture {
 .business_info{
   width: 300px;
 }
-
+.mapx{
+  padding-right: 50px;
+}
+#map {
+  width: 300px;
+  height: 300px;
+}
 }
 
 @media only screen and (max-width: 800px) { 
@@ -1009,7 +1026,15 @@ span.picture {
   width: 300px;
 }
 
-
+.mapx{
+  padding-right: 0px;
+  padding-left: 30px;
+}
+#map {
+  width: 400px;
+  height: 400px;
+  float: none;
+}
 
 
 }
@@ -1098,7 +1123,9 @@ span.picture {
 .statsz{
   margin-top: -5px;
 }
-
+.mapx {
+  padding-left: 30px;
+}
 #map {
   margin-top: -30px;
   width: 300px;
