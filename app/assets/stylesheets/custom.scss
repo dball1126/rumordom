@@ -922,14 +922,14 @@ span.picture {
     }
     
   .span2 {
-    width: 400px;
+    max-width: 600px;
     float: left;
     padding-top: 15px;
     .search-form {
       width: 300px;
       padding-left: 10px;
       .before-buttons {
-        width: 296px;
+        max-width: 600px;
       }
       .location_search {
         width: 296px;
