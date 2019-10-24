@@ -33013,3 +33013,4 @@ Processing by StaticPagesController#user_feed as HTML
 Completed 200 OK in 522ms (Views: 501.3ms | ActiveRecord: 6.0ms)
 
 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
