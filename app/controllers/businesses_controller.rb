@@ -99,7 +99,7 @@ class BusinessesController < ApplicationController
         
         load_businessz
       elsif params[:page].to_i * 30 < 1000
-        
+        debugger
         @businesses = Business.search(params).paginate(:page => params[:page], :per_page => 30)
         load_businessz
       end

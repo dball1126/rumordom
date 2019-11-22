@@ -197,6 +197,7 @@ end
           end
 
              if businesses.empty?
+              debugger
                  businesses
                 
              else
